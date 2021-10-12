@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta keywords="pug,practica,html" />
+  <title>S04_PR1</title>
+</head>
+<header>
+  <nav>
+    <h1>Curriculum Vitae</h1>
+    <p>Secciones</p>
+    <ol>
+      <li type="I"><a href="#datos">Datos personales</a></li>
+      <li type="I"><a href="#exp">Experiéncia</a></li>
+      <li type="I"><a href="#form">Formación</a></li>
+      <li type="I"><a href="#idiomas">Idiomas</a></li>
+      <li type="I"><a href="#otros">Otros</a></li>
+    </ol>
+  </nav>
+</header>
+<body>
+  <main>
+    <form enctype="multipart/form-data">
+      <fieldset>
+        <legend id="datos">Datos Personales</legend>
+        <p>
+          <label for="foto">Foto:</label><br />
+          <input type="file" />
+        </p>
+        <p>
+          Sexo:<br />
+          <input id="hombre" type="radio" name="sexo" value="hombre" />
+          <label for="hombre">Hombre</label><br />
+          <input id="mujer" type="radio" name="sexo" value="mujer" />
+          <label for="mujer">Mujer</label><br />
+          <input id="nsnc" type="radio" name="sexo" value="nsnc" />
+          <label for="nsnc">NS/NC</label>
+        </p>
+        <p>
+          <label for="nombre">Nombre: </label>
+          <input id="nombre" type="text" name="nombre" />
+        </p>
+        <p>
+          <label for="apellidos">Apellidos: </label>
+          <input id="apellidos" type="text" name="apellidos" />
+        </p>
+        <p>
+          <label for="edad">Edad: </label>
+          <input id="edad" type="number" name="edad" min="18" />
+        </p>
+        <p>
+          <label for="direccion">Direcci&oacute;n: </label>
+          <input id="direccion" type="text" name="direccion" />
+        </p>
+        <p>
+          <label for="email" required>Email: </label>
+          <input id="email" type="email" name="email" />
+        </p>
+        <p>
+          <label for="telefono">Teléfono: </label>
+          <input id="telefono" type="tel" name="telefono" />
+        </p>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend id="exp">Experiencia laboral</legend>
+        <h4>&Uacute;ltima experiencia laboral</h4>
+        <p>
+          <label for="empresa1">Nombre de la empresa: </label>
+          <input id="empresa1" type="text" name="empresa" />
+        </p>
+        <p>
+          <label for="cargo1">Cargo: </label>
+          <input id="cargo1" type="text" name="cargo1" />
+        </p>
+        <p>
+          <label for="tareas1">Tareas realizadas:</label>
+          <input id="tareas1" type="text" name="tareas1" />
+        </p>
+        <p>
+          <label for="desde1">Desde: </label>
+          <input id="desde1" type="date" name="desde1" />
+          <label for="hasta1">Hasta: </label>
+          <input id="hasta1" type="date" name="hasta1" />
+        </p>
+        <hr />
+        <h4>Pen&uacute;ltima experi&eacute;ncia laboral</h4>
+        <p>
+          <label for="empresa2">Nombre de la empresa: </label>
+          <input id="empresa2" type="text" name="empresa" />
+        </p>
+        <p>
+          <label for="cargo2">Cargo: </label>
+          <input id="cargo2" type="text" name="cargo2" />
+        </p>
+        <p>
+          <label for="tareas2">Tareas realizadas:</label>
+          <input id="tareas2" type="text" name="tareas2" />
+        </p>
+        <p>
+          <label for="desde2">Desde: </label>
+          <input id="desde2" type="date" name="desde2" />
+          <label for="hasta2">Hasta: </label>
+          <input id="hasta2" type="date" name="hasta2" />
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend id="form">Formacion</legend>
+        <h4>&Uacute;ltima formaci&oacute;n realacionada:</h4>
+        <p>
+          <label for="titulo1">T&iacute;tulo: </label>
+          <input id="titulo1" type="text" name="titulo1" />
+        </p>
+        <p>
+          <label for="conocimientos1"
+            >Conocimientos adquiridos <br />
+            relacionados con el puesto:</label
+          >
+          <input id="conocimientos1" type="text" name="conocimientos1" />
+        </p>
+        <p>
+          <label for="desde1">Desde: </label>
+          <input id="desde1" type="date" name="desde1" />
+          <label for="hasta1">Hasta: </label>
+          <input id="hasta1" type="date" name="hasta1" />
+        </p>
+        <hr />
+        <h4>Otra formaci&oacute;n realacionada:</h4>
+        <p>
+          <label for="titulo2">T&iacute;tulo: </label>
+          <input id="titulo2" type="text" name="titulo2" />
+        </p>
+        <p>
+          <label for="conocimientos2"
+            >Conocimientos adquiridos <br />
+            relacionados con el puesto:</label
+          >
+          <input id="conocimientos2" type="text" name="conocimientos2" />
+        </p>
+        <p>
+          <label for="desde2">Desde: </label>
+          <input id="desde2" type="date" name="desde2" />
+          <label for="hasta2">Hasta: </label>
+          <input id="hasta2" type="date" name="hasta2" />
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend id="idiomas">Idiomas</legend>
+        <label for="ingles">Ingl&eacute;s</label>
+        <select id="ingles" name="ingles">
+          <option value="Bajo">Bajo</option>
+          <option value="Medio">Medio</option>
+          <option value="Alto">Alto</option>
+        </select>
+        <label for="frances">Franc&eacute;s</label>
+        <select id="frances" name="frances">
+          <option value="Bajo">Bajo</option>
+          <option value="Medio">Medio</option>
+          <option value="Alto">Alto</option>
+        </select>
+        <label for="aleman">Alem&aacute;n</label>
+        <select id="aleman" name="aleman">
+          <option value="Bajo">Bajo</option>
+          <option value="Medio">Medio</option>
+          <option value="Alto">Alto</option>
+        </select>
+        <p>
+          <label for="otrosidiomas">Otros idiomas:</label>
+          <input id="otrosidiomas" type="text" name="otrosidiomas" />
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend id="otros">
+          Motivos por los que considera que debemos contratarle:
+        </legend>
+        <textarea
+          id="motivos"
+          style="width: 100%"
+          name="motivos"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <small>I.E.S Maria Enriquez 2022</small><a href="#">Volver Arriba</a>
+  </footer>
+</body>

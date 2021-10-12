@@ -1,0 +1,154 @@
+-var op1 = "Bajo"
+-var op2 = "Medio"
+-var op3 = "Alto"
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(keywords='pug,practica,html')
+  title S04_PR1
+header
+  nav
+    h1 Curriculum Vitae
+    p Secciones
+    ol 
+      li(type="I")
+        a(href="#datos") Datos personales
+      li(type="I")
+        a(href="#exp") Experiéncia
+      li(type="I")
+        a(href="#form") Formación
+      li(type="I")
+        a(href="#idiomas") Idiomas
+      li(type="I")
+        a(href="#otros") Otros
+body
+  main
+    form(enctype='multipart/form-data')
+      fieldset
+        legend#datos Datos Personales
+        p
+          label(for='foto') Foto:
+          br
+          input(type='file')
+        p Sexo:
+          br
+          input#hombre(type='radio' name='sexo' value='hombre')
+          label(for='hombre') Hombre
+          br
+          input#mujer(type='radio' name='sexo' value='mujer')
+          label(for='mujer') Mujer
+          br
+          input#nsnc(type='radio' name='sexo' value='nsnc')
+          label(for='nsnc') NS/NC
+        p
+          label(for='nombre') Nombre: 
+          input#nombre(type='text' name='nombre')
+        p
+          label(for='apellidos') Apellidos: 
+          input#apellidos(type='text' name='apellidos')
+
+        p
+          label(for='edad') Edad: 
+          input#edad(type='number' name='edad' min=18)
+        p
+          label(for='direccion') Direcci&oacute;n: 
+          input#direccion(type='text' name='direccion')
+        p
+          label(for='email' required) Email: 
+          input#email(type='email' name='email')
+        p
+          label(for='telefono') Teléfono: 
+          input#telefono(type='tel' name='telefono')
+      br
+      fieldset
+        legend#exp Experiencia laboral
+        h4 &Uacute;ltima experiencia laboral
+        p
+          label(for='empresa1') Nombre de la empresa: 
+          input#empresa1(type='text' name='empresa')
+        p
+          label(for='cargo1') Cargo: 
+          input#cargo1(type='text' name='cargo1')
+        p
+          label(for='tareas1') Tareas realizadas:
+          input#tareas1(type='text' name='tareas1')
+        p
+          label(for='desde1') Desde: 
+          input#desde1(type='date' name='desde1')
+          label(for='hasta1') Hasta: 
+          input#hasta1(type='date' name='hasta1')
+        hr
+        h4 Pen&uacute;ltima experi&eacute;ncia laboral
+        p
+          label(for='empresa2') Nombre de la empresa: 
+          input#empresa2(type='text' name='empresa')
+        p
+          label(for='cargo2') Cargo: 
+          input#cargo2(type='text' name='cargo2')
+        p
+          label(for='tareas2') Tareas realizadas:
+          input#tareas2(type='text' name='tareas2')
+        p
+          label(for='desde2') Desde: 
+          input#desde2(type='date' name='desde2')
+          label(for='hasta2') Hasta: 
+          input#hasta2(type='date' name='hasta2')
+      fieldset
+        legend#form Formacion
+        h4 &Uacute;ltima formaci&oacute;n realacionada:
+        p
+          label(for='titulo1') T&iacute;tulo: 
+          input#titulo1(type='text' name='titulo1')
+        p
+          label(for='conocimientos1')
+            | Conocimientos adquiridos 
+            br
+            |           relacionados con el puesto:
+          input#conocimientos1(type='text' name='conocimientos1')
+        p
+          label(for='desde1') Desde: 
+          input#desde1(type='date' name='desde1')
+          label(for='hasta1') Hasta: 
+          input#hasta1(type='date' name='hasta1')
+        hr
+        h4 Otra formaci&oacute;n realacionada:
+        p
+          label(for='titulo2') T&iacute;tulo: 
+          input#titulo2(type='text' name='titulo2')
+        p
+          label(for='conocimientos2')
+            | Conocimientos adquiridos 
+            br
+            |           relacionados con el puesto:
+          input#conocimientos2(type='text' name='conocimientos2')
+        p
+          label(for='desde2') Desde: 
+          input#desde2(type='date' name='desde2')
+          label(for='hasta2') Hasta: 
+          input#hasta2(type='date' name='hasta2')
+      fieldset
+        legend#idiomas Idiomas
+        label(for='ingles') Ingl&eacute;s
+        select#ingles(name='ingles')
+          option(value='Bajo') !{op1}        
+          option(value='Medio') !{op2}  
+          option(value='Alto') !{op3} 
+        label(for='frances') Franc&eacute;s
+        select#frances(name='frances')
+          option(value='Bajo') !{op1}     
+          option(value='Medio') !{op2} 
+          option(value='Alto') !{op3} 
+        label(for='aleman') Alem&aacute;n
+        select#aleman(name='aleman')
+          option(value='Bajo') !{op1} 
+          option(value='Medio') !{op2} 
+          option(value='Alto') !{op3} 
+        p
+          label(for='otrosidiomas') Otros idiomas:
+          input#otrosidiomas(type='text' name='otrosidiomas')
+      fieldset
+        legend#otros Motivos por los que considera que debemos contratarle:
+        textarea#motivos(style='width: 100%' name='motivos' cols='30' rows='10')
+  footer
+    small I.E.S Maria Enriquez 2022
+    a(href="#") Volver Arriba
