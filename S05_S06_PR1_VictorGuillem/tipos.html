@@ -12,13 +12,38 @@
       } */
       #listaimagen {
         display: grid;
-        grid-template-areas: "lista granos";
+        grid-template-areas: 'lista granos';
       }
       #listacafe {
         grid-area: lista;
       }
       #granoscafe {
         grid-area: granos;
+      }
+      body {
+        color: rgb(88, 79, 66);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 21px;
+      }
+
+      img {
+        height: 100%;
+      }
+      a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+      li a:visited {
+        color: rgb(155, 30, 55);
+      }
+      span {
+        font-size: 30px;
+      }
+      h1,
+      h2,
+      li a,
+      .volver {
+        color: rgb(155, 30, 55);
       }
     </style>
   </head>
@@ -34,10 +59,10 @@
     <p>Las variedades del café que nos podemos encontrar son:</p>
     <div id="listaimagen">
       <ul id="listacafe">
-        <li>Café Arábica Lavado</li>
-        <li>Café Arábica No Lavado</li>
-        <li>Café Robusta</li>
-        <li>Café Caracolillo</li>
+        <li><a href="#ArabicaLavado">Café Arábica Lavado</a></li>
+        <li><a href="#ArabicaNoLavado">Café Arábica No Lavado</a></li>
+        <li><a href="#Robusta">Café Robusta</a></li>
+        <li><a href="#Caracolillo">Café Caracolillo</a></li>
       </ul>
       <img
         id="granoscafe"
@@ -45,7 +70,7 @@
         alt="imagen de diferentes granos de café"
       />
     </div>
-    <h2>Café Arábica Lavado</h2>
+    <h2 id="ArabicaLavado">Café Arábica Lavado</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa
       necessitatibus harum voluptatibus cum modi eum at repellendus dolorum?
@@ -54,7 +79,10 @@
       quis odio praesentium dolorum delectus. Neque saepe quae ipsum!
       Consequatur numquam natus alias?
     </p>
-    <h2>Café Arábica No Lavado</h2>
+    <p>
+      <a href="#" class="volver">Volver arriba <span>🠕</span></a>
+    </p>
+    <h2 id="ArabicaNoLavado">Café Arábica No Lavado</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa
       necessitatibus harum voluptatibus cum modi eum at repellendus dolorum?
@@ -63,7 +91,8 @@
       quis odio praesentium dolorum delectus. Neque saepe quae ipsum!
       Consequatur numquam natus alias?
     </p>
-    <h2>Café Robusta</h2>
+    <a href="#" class="volver">Volver arriba <span>🠕</span></a>
+    <h2 id="Robusta">Café Robusta</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa
       necessitatibus harum voluptatibus cum modi eum at repellendus dolorum?
@@ -72,7 +101,8 @@
       quis odio praesentium dolorum delectus. Neque saepe quae ipsum!
       Consequatur numquam natus alias?
     </p>
-    <h2>Café Caracolillo</h2>
+    <a href="#" class="volver">Volver arriba <span>🠕</span></a>
+    <h2 id="Caracolillo">Café Caracolillo</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa
       necessitatibus harum voluptatibus cum modi eum at repellendus dolorum?
@@ -81,5 +111,6 @@
       quis odio praesentium dolorum delectus. Neque saepe quae ipsum!
       Consequatur numquam natus alias?
     </p>
+    <a href="#" class="volver">Volver arriba <span>🠕</span></a>
   </body>
 </html>

@@ -6,5 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Contacto</h1>
+    <hr />
+    <p>
+      Si desea ponerse en contacto con nosotros rellene este formulario y le
+      contestaremos en la mayor brevedad posible.
+    </p>
+    <form action="">
+      <table class="tablaform">
+        <tr>
+          <td><label for="nombre">Nombre:</label></td>
+          <td><input type="text" name="nombre" id="nombre" /></td>
+        </tr>
+        <tr>
+          <td><label for="edad">Edad:</label></td>
+          <td><input type="number" name="edad" id="edad" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" /></td>
+        </tr>
+      </table>
+      <p>¿Cuantas tazas de café tomas al dia?</p>
+      <input type="radio" name="tazas" id="1-2" value="1-2" />
+      <label for="1-2">Entre una y dos</label>
+      <input type="radio" name="tazas" id="2-5" value="2-5" />
+      <label for="2-5">Entre dos y cinco</label>
+      <input type="radio" name="tazas" id="+5" value="+5" />
+      <label for="+5">Más de cinco</label>
+      <p>¿Cómo te gusta preparar el café?</p>
+      <select name="preparar" id="preparar">
+        <option value="capsula">Cápsulas</option>
+        <option value="italiana">Cafetera italiana</option>
+        <option value="soluble">Soluble</option>
+      </select>
+      <p>¿Cómo variedad de café te gusta más?</p>
+      <select name="variedad" id="variedad" multiple>
+        <option value="arabica">Arábica</option>
+        <option value="robusta">Robsta</option>
+        <option value="caracolillo">Caracolillo</option>
+      </select>
+      <br />
+      <p>¿Cómo nos ha encontrado?</p>
+      <input name="encontrado" list="encontrado" />
+      <datalist id="encontrado">
+        <option value="Anuncio TV"></option>
+        <option value="Recomendación de un amigo"></option>
+        <option value="Buscador online"></option>
+        <option value="Otros"></option>
+      </datalist>
+      <br />
+      <label for="taza">De qué color es tu taza de café preferida:</label>
+      <input type="color" id="taza" name="taza" value="#000" />
+      <br />
+      <label for="nivel">Como de amante del café te consideras:</label>
+      <input type="range" id="nivel" name="nivel" min="0" max="100" />
+      <p>Comentarios:</p>
+      <textarea
+        name="comentarios"
+        id="comentarios"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <br />
+      <input type="submit" value="Enviar" />
+      <input type="reset" value="Borrar" />
+    </form>
+  </body>
 </html>

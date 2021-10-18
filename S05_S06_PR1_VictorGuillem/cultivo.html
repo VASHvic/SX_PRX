@@ -13,26 +13,36 @@
       }
       body {
         background-color: #cccc66;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
       }
       h1,
       h4 {
-        color: rgb(155, 70, 87);
+        color: rgb(155, 30, 55);
+      }
+      hr {
+        margin-bottom: 2%;
       }
       table,
       tr,
       td {
-        border: 1px solid black;
+        border: 1.5px solid white;
         border-collapse: collapse;
       }
       table {
-        width: 50vw;
-        height: 33vh;
+        margin-top: 8%;
+        width: 70vw;
+        height: 50vh;
+      }
+      .tableheader {
+        font-weight: bold;
       }
       article {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
       }
     </style>
   </head>
@@ -41,12 +51,12 @@
       <h1>Suelo para cultivo</h1>
       <hr />
     </header>
-    <h4>
-      Contenidos adecuados de nutrientes en un suelo para el cultivo del café
-    </h4>
     <article>
+      <h4>
+        Contenidos adecuados de nutrientes en un suelo para el cultivo del café
+      </h4>
       <table>
-        <tr>
+        <tr class="tableheader">
           <td colspan="2">Elemento</td>
           <td>Cantidad Adecuada</td>
         </tr>

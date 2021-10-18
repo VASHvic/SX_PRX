@@ -5,8 +5,8 @@
 body {
   display: grid;
   grid-template-areas:
-    "header1  header2"
-    "aside main";
+    'header1  header2'
+    'aside main';
   grid-template-columns: 2fr 8fr;
   background: #cccc66;
   width: 100%;
@@ -19,14 +19,17 @@ body {
   grid-area: header2;
 }
 .header {
-  height: 20vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
+}
+.header img {
+  height: 90%;
 }
 main {
   grid-area: main;
   background: #cccc66;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +37,7 @@ main {
 aside {
   grid-area: aside;
   background: #cccc66;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -53,11 +56,13 @@ aside {
   background-color: #c59e55;
   text-align: left;
   list-style-type: none;
-  font-size: 19px;
+  font-size: 33px;
   list-style-position: inside;
   justify-content: space-around;
   border-radius: 30px;
   box-shadow: 5px 10px 8px #94945e;
+  font-family: 'Annie Use Your Telescope', cursive;
+  width: 60%;
 }
 #menu li {
   word-wrap: normal;
@@ -65,14 +70,14 @@ aside {
 #menu li a {
   text-decoration: none;
   margin-left: 20%;
-  color: rgb(110, 96, 78);
+  color: rgb(88, 79, 66);
 }
 iframe {
   border: none;
-  height: 90%;
-  width: 90%;
+  height: 75%;
+  width: 75%;
 }
-@media (max-width: 780px) {
+@media (max-width: 850px) {
   #menu {
     width: 90%;
     border-radius: 10px;
