@@ -5,6 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
+    <style>
+      h1,
+      .obligado {
+        color: rgb(155, 30, 55);
+      }
+      body {
+        color: rgb(88, 79, 66);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 21px;
+      }
+      .tablaform td {
+        text-align: end;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .grande,
+      .boton {
+        font-size: 21px;
+      }
+    </style>
   </head>
   <body>
     <h1>Contacto</h1>
@@ -13,43 +34,73 @@
       Si desea ponerse en contacto con nosotros rellene este formulario y le
       contestaremos en la mayor brevedad posible.
     </p>
+    <p>
+      Los campos con asterisco <span class="obligado">(*)</span> son
+      obligatorios.
+    </p>
     <form action="">
       <table class="tablaform">
         <tr>
-          <td><label for="nombre">Nombre:</label></td>
-          <td><input type="text" name="nombre" id="nombre" /></td>
+          <td>
+            <label for="nombre"
+              >Nombre: <span class="obligado">(*)</span></label
+            >
+          </td>
+          <td>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              maxlength="25"
+              autofocus
+              required
+            />
+          </td>
         </tr>
         <tr>
           <td><label for="edad">Edad:</label></td>
-          <td><input type="number" name="edad" id="edad" /></td>
+          <td>
+            <input type="number" name="edad" id="edad" min="1" max="100" />
+          </td>
         </tr>
         <tr>
-          <td><label for="email">Email:</label></td>
-          <td><input type="text" name="email" id="email" /></td>
+          <td>
+            <label for="email">Email: <span class="obligado">(*)</span></label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              maxlength="15"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              required
+            />
+          </td>
         </tr>
       </table>
-      <p>¿Cuantas tazas de café tomas al dia?</p>
-      <input type="radio" name="tazas" id="1-2" value="1-2" />
+      <p class="bold">¿Cuantas tazas de café tomas al dia?</p>
+      <input type="radio" name="tazas" id="1-2" value="1-2" checked />
       <label for="1-2">Entre una y dos</label>
       <input type="radio" name="tazas" id="2-5" value="2-5" />
       <label for="2-5">Entre dos y cinco</label>
       <input type="radio" name="tazas" id="+5" value="+5" />
       <label for="+5">Más de cinco</label>
-      <p>¿Cómo te gusta preparar el café?</p>
-      <select name="preparar" id="preparar">
+      <p class="bold">¿Cómo te gusta preparar el café?</p>
+      <select name="preparar" id="preparar" class="grande">
         <option value="capsula">Cápsulas</option>
         <option value="italiana">Cafetera italiana</option>
         <option value="soluble">Soluble</option>
       </select>
-      <p>¿Cómo variedad de café te gusta más?</p>
-      <select name="variedad" id="variedad" multiple>
+      <p class="bold">Qué variedad de café te gusta más?</p>
+      <select class="grande" name="variedad" id="variedad" multiple>
         <option value="arabica">Arábica</option>
         <option value="robusta">Robsta</option>
         <option value="caracolillo">Caracolillo</option>
       </select>
       <br />
-      <p>¿Cómo nos ha encontrado?</p>
-      <input name="encontrado" list="encontrado" />
+      <p class="bold">¿Cómo nos ha encontrado?</p>
+      <input class="grande" name="encontrado" list="encontrado" />
       <datalist id="encontrado">
         <option value="Anuncio TV"></option>
         <option value="Recomendación de un amigo"></option>
@@ -57,21 +108,27 @@
         <option value="Otros"></option>
       </datalist>
       <br />
-      <label for="taza">De qué color es tu taza de café preferida:</label>
-      <input type="color" id="taza" name="taza" value="#000" />
       <br />
-      <label for="nivel">Como de amante del café te consideras:</label>
+      <label class="bold" for="taza"
+        >De qué color es tu taza de café preferida:</label
+      >
+      <input type="color" id="taza" name="taza" value="#000000" />
+      <br />
+      <br />
+      <label class="bold" for="nivel"
+        >Como de amante del café te consideras:</label
+      >
       <input type="range" id="nivel" name="nivel" min="0" max="100" />
-      <p>Comentarios:</p>
+      <p class="bold">Comentarios:</p>
       <textarea
         name="comentarios"
         id="comentarios"
-        cols="30"
+        cols="80"
         rows="10"
       ></textarea>
       <br />
-      <input type="submit" value="Enviar" />
-      <input type="reset" value="Borrar" />
+      <input class="boton" type="submit" value="Enviar" />
+      <input class="boton" type="reset" value="Borrar" />
     </form>
   </body>
 </html>

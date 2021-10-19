@@ -77,12 +77,12 @@ iframe {
   height: 75%;
   width: 75%;
 }
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   #menu {
     width: 90%;
     border-radius: 10px;
   }
   #menu li a {
-    margin-left: 10%;
+    margin-left: 8%;
   }
 }

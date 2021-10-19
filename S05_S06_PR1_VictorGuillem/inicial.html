@@ -12,16 +12,35 @@
       }
       .container {
         height: 100vh;
+        display: flex;
+        justify-content: center;
       }
       .container img {
         height: 100%;
         width: 100%;
       }
+      #imageninicial {
+        width: 546px;
+        height: 444px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <img src="./img/inicio.png" alt="pantalla principal" />
+      <img
+        id="imageninicial"
+        src="./img/mapa14.png"
+        alt="pantalla principal"
+        usemap="#iniciomap"
+      />
     </div>
+    <!-- prettier-ignore -->
+    <map name="iniciomap">
+    <area target="" alt="cultivo" title="cultivo" href="./cultivo.html" coords="12,68,120,122" shape="rect">
+    <area target="" alt="tipos" title="tipos" href="./tipos.html" coords="249,28,339,79" shape="rect">
+    <area target="" alt="contacto" title="contacto" href="./contacto.html" coords="91,347,228,396" shape="rect">
+    <area target="" alt="preparacion" title="preparacion" href="./preparacion.html" coords="334,178,498,212" shape="rect">
+</map>
+</map>
   </body>
 </html>
