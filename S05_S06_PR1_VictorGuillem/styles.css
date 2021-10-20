@@ -76,8 +76,8 @@ aside {
 }
 iframe {
   border: none;
-  height: 75%;
-  width: 75%;
+  height: 85%;
+  width: 85%;
 }
 @media (max-width: 1050px) {
   #menu {
