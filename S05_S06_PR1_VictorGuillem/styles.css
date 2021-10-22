@@ -62,28 +62,18 @@ aside {
   border-radius: 30px;
   box-shadow: 5px 10px 8px #94945e;
   font-family: "Annie Use Your Telescope", cursive;
-  width: 60%;
-  padding: 2%;
+  width: 65%;
+  padding: 5%;
+  padding-right: 0;
+  font-size: 25px;
 }
-#menu li {
-  word-wrap: normal;
-}
+
 #menu li a {
   text-decoration: none;
-  margin-left: 20%;
   color: rgb(88, 79, 66);
-  font-size: 2.2vmax;
 }
 iframe {
   border: none;
-  height: 85%;
-  width: 85%;
-}
-@media (max-width: 1050px) {
-  #menu {
-    width: 70%;
-    border-radius: 10px;
-    padding: 0%;
-    font-size: 3.5vmax;
-  }
+  height: 75vh;
+  width: 80vw;
 }
