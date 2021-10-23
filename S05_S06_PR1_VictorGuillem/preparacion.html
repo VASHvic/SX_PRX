@@ -6,34 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preparación</title>
     <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
       body {
         display: grid;
         grid-template-areas: "main aside";
-        grid-template-columns: 7fr 3fr;
+        grid-template-columns: 4fr 4fr;
+        margin: 0;
       }
       main {
         grid-area: main;
+        width: 100%;
       }
       aside {
         grid-area: aside;
+        width: 100%;
+      }
+      aside  *, main  *{
+        width: 100%;
+        
       }
       .gmap_canvas {
         overflow: hidden;
         background: none !important;
         height: 100%;
-        width: 100%;
       }
-      mapouter {
+      #mapouter {
         position: relative;
         text-align: right;
-        height: 500px;
-        width: 500px;
+        height: 100%;
       }
+
+      #carrousel{        
+        height: 100%;
+      }
+
+
     </style>
   </head>
   <body>
     <main>
+      <!-- Video Youtube -->
       <iframe
+      id="video1"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/op6levyiA94"
@@ -42,14 +59,27 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      <p>
-        <video
-          src="https://youtu.be/ElqnCm2kmu4"
+      <!-- Video Tag -->
+      <div id="contvideo2">
+        <video controls loop autoplay
+          id="video2"
+          src="./video/Comidista_cafe.mp4"
           alt="video el comidista preparar café"
-        ></video>
-      </p>
+        >
+        <source  src="./video/Comidista_cafe.mp4" type="video/mp4"> 
+        <source  src="./video/Comidista_cafe.ogv" type="video/ogv"> 
+      </video>
+      </div>
+      <!-- Carrousel -->
+      <div id="carrouselcontainer">
+        <img id= "carrousel" name = "slide" width="400" height="200">
+      </div>
+      <!-- Noticias -->
+      <div id="glbd-widget"><div id="glbd-load" style="width: 550px; background: url(http://globedia.com/img/loading.gif) center no-repeat;"></div><div id="glbd-link" style="text-align:right; font-size:10px; font-family:'Trebuchet MS', Arial; margin: auto; width: 550px;"><a href="http://globedia.com" title="Noticias" target="_blank" style="color:#999; text-decoration:none;">globedia.com</a></div></div><script type="text/javascript" src="http://globedia.com/widgets/widget.js"></script><script type="text/javascript" src="http://globedia.com/widgets/widget.php?country=CO&category=0&order=date&cols=2&num=4&width=550&height=false&title=Noticias%20de%20Globedia&author=false&images=false&summaries=true&votes=false"></script><script type="text/javascript">GlobediaWidget.init();</script>
     </main>
+    <!-- aside -->
     <aside>
+      <!-- Mapa Colombia -->
       <div id="mapouter">
         <div class="gmap_canvas">
           <iframe
@@ -61,13 +91,39 @@
             scrolling="no"
             marginheight="0"
             marginwidth="0"
-          ></iframe>
-          <a class="weatherwidget-io" href="https://forecast7.com/en/4d71n74d07/bogota/" data-label_1="BOGOTA" data-label_2="WEATHER" data-theme="original" >BOGOTA WEATHER</a>
-
-          
+          >
+        </iframe>
+          <!-- De weatherwidget-io , encontrado con una búsqueda de Google -->
+           <a class="weatherwidget-io" href="https://forecast7.com/en/4d71n74d07/bogota/" data-label_1="BOGOTA" data-label_2="WEATHER" data-theme="original" >BOGOTA WEATHER</a>
+           <div id="calendariocontainer">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FMadrid&src=dmZvcnZhbmlzaEBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285F4&color=%237CB342&color=%23009688" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+           </div>
     </aside>
   </body>
   <script>
+    //El script pertenece a el widget del tiempo
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    //slider
+  var i = 0;
+
+  var images = [];
+  images[0] = "./img/slider1.jpg";
+  images[1] = "./img/slider2.jpg";
+  images[2] = "./img/slider3.jpg";
+  images[3] = "./img/slider4.jpg";
+
+  function changeImg() {
+    document.slide.src = images[i];
+
+    if (i < images.length - 1) {
+      i++;
+    } else {
+      i = 0;
+    }
+
+    setTimeout("changeImg()", 2000);
+  }
+
+  window.onload = changeImg;
     </script>
 </html>
