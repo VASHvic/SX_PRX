@@ -1,0 +1,117 @@
+html {
+  background-color: #faecd3;
+}
+body {
+  font-family: "Helvetica", sans-serif;
+  text-underline-offset: 0.2em;
+  font-size: 18px;
+  margin: 0;
+}
+header,
+footer {
+  background: rgb(184, 211, 221);
+  text-align: center;
+  padding: 7px 0px;
+}
+header h1 {
+  margin-top: 0;
+}
+footer small {
+  display: flex;
+  justify-content: space-around;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+main {
+  padding: 1%;
+  margin-left: 6%;
+}
+.foto {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  border-radius: 35px;
+}
+
+.logoeduc {
+  height: 75px;
+  width: 75px;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+#info-personal {
+  margin-left: 20%;
+}
+li {
+  margin-left: 20%;
+}
+.azul {
+  color: rgb(94, 114, 228);
+}
+.subrayado {
+  text-decoration: underline;
+}
+hr {
+  border: 0;
+  height: 1px;
+  border-color: rgb(94, 114, 228);
+  background-image: linear-gradient(
+    to right,
+    rgba(94, 114, 228, 0),
+    rgba(94, 114, 228, 0.75),
+    rgba(94, 114, 228, 0)
+  );
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+#idiomas {
+  width: 80%;
+}
+.square {
+  list-style-type: square;
+}
+.I {
+  list-style-type: upper-roman;
+}
+header {
+  display: grid;
+  grid-template-rows: 3fr;
+}
+header > * {
+  margin: 1%;
+  padding: 0;
+}
+header #botones {
+  margin: 0;
+}
+#vo {
+  background-color: goldenrod;
+}
+#moderno {
+  background-color: tomato;
+}
+#retro {
+  background-color: limegreen;
+}
+header p {
+  color: white;
+}
+
+@media (max-width: 560px) {
+  .foto,
+  #smiley,
+  .logoeduc {
+    margin-left: -15px;
+  }
+}

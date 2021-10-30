@@ -1,0 +1,94 @@
+@font-face {
+  font-family: GreatVibes;
+  src: url(../ttf/GreatVibes-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  font-size: 1.3em;
+  font-family: "Poppins", sans-serif;
+}
+body > :not(header) {
+  margin-left: 2%;
+}
+body {
+  background: whitesmoke;
+}
+header {
+  text-align: center;
+  padding: 7px 0px;
+  font-size: 1.7em;
+  background: rgb(61, 60, 60);
+}
+header h1 {
+  font-family: GreatVibes;
+  color: rgb(59, 145, 145);
+}
+header button {
+  border: none;
+  height: 25px;
+  width: 150px;
+  vertical-align: middle;
+  border-radius: 50px;
+}
+
+header nav#link a {
+  font-size: 1rem;
+  margin-top: 1%;
+  color: black;
+  float: right;
+  margin: 10px;
+}
+
+main img.foto {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  border-radius: 35px;
+}
+table#info-personal {
+  margin-left: 20%;
+}
+ul li {
+  margin-left: 20%;
+}
+section img[alt="Logo CDT"] {
+  height: 75px;
+  width: 75px;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+#vo {
+  background-color: goldenrod;
+}
+#moderno {
+  background-color: tomato;
+}
+#retro {
+  background-color: limegreen;
+}
+header p {
+  color: white;
+}
+hr {
+  border: 0;
+  height: 1px;
+  border-color: rgb(94, 114, 228);
+  background-image: linear-gradient(
+    to right,
+    rgba(29, 43, 122, 0),
+    rgba(45, 72, 221, 0.75),
+    rgba(39, 62, 192, 0)
+  );
+}
+li.I {
+  list-style-type: upper-roman;
+  margin-left: 20%;
+}
+li.square {
+  list-style-type: square;
+}

@@ -1,0 +1,60 @@
+html {
+  --bluesky: rgb(184, 211, 221);
+  padding: 5%;
+  font-size: 1.3em;
+  font-family: "Times New Roman", Times, serif;
+  background: url(../img/background.jpg);
+  background-attachment: fixed;
+}
+header {
+  padding: 7px 0px;
+  background-color: var(--bluesky);
+  padding: 15px;
+}
+
+h3::first-letter {
+  font-size: 1.5em;
+  color: crimson;
+}
+
+main img.foto {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+}
+
+main img.foto:not(#smiley),
+section img[alt="Logo CDT"] {
+  border: 5px solid goldenrod;
+}
+table#info-personal {
+  margin-left: 20%;
+}
+ul li {
+  margin-left: 20%;
+}
+section img.logoeduc {
+  height: 75px;
+  width: 75px;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+#vo {
+  background-color: goldenrod;
+}
+#vo ~ #moderno {
+  background-color: tomato;
+}
+#moderno + * {
+  background-color: limegreen;
+}
+header p {
+  color: white;
+}
+#info-personal tr td:nth-child(2) {
+  color: rgb(97, 33, 11);
+  font-weight: bold;
+}
+#info-personal tr td:nth-child(1) i {
+  color: darkred;
+}
