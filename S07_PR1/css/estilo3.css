@@ -43,10 +43,10 @@ section img.logoeduc {
   background-color: goldenrod;
 }
 #vo ~ #moderno {
-  background-color: tomato;
+  background-color: limegreen;
 }
 #moderno + * {
-  background-color: limegreen;
+  background-color: tomato;
 }
 header p {
   color: white;

@@ -9,10 +9,11 @@
   text-decoration: none;
 }
 :root {
+  --negrogrisaceo: rgb(61, 60, 60);
   font-size: 1.3em;
   font-family: "Poppins", sans-serif;
 }
-body > :not(header) {
+body > :not(header, footer) {
   margin-left: 2%;
 }
 body {
@@ -43,6 +44,13 @@ header nav#link a {
   float: right;
   margin: 10px;
 }
+header + * {
+  margin-top: 2%;
+}
+
+h3 {
+  margin-bottom: 1%;
+}
 
 main img.foto {
   height: 90px;
@@ -59,17 +67,15 @@ ul li {
 section img[alt="Logo CDT"] {
   height: 75px;
   width: 75px;
-  margin-top: -25px;
-  margin-bottom: -25px;
 }
 #vo {
   background-color: goldenrod;
 }
 #moderno {
-  background-color: tomato;
+  background-color: limegreen;
 }
 #retro {
-  background-color: limegreen;
+  background-color: tomato;
 }
 header p {
   color: white;
@@ -91,4 +97,25 @@ li.I {
 }
 li.square {
   list-style-type: square;
+}
+main + * {
+  background-color: var(--negrogrisaceo);
+}
+.azul {
+  color: darkslateblue;
+}
+.subrayado:not(h3) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+footer small {
+  display: flex;
+  justify-content: space-around;
+}
+footer small a {
+  color: azure;
+}
+section#otros table tr td {
+  width: 20%;
+  padding: 5px;
 }
