@@ -12,6 +12,7 @@
   --negrogrisaceo: rgb(61, 60, 60);
   font-size: 1.3em;
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 body > :not(header, footer) {
   margin-left: 2%;
@@ -48,7 +49,8 @@ header + * {
   margin-top: 2%;
 }
 
-h3 {
+h3,
+h4 {
   margin-bottom: 1%;
 }
 
@@ -107,6 +109,9 @@ main + * {
 .subrayado:not(h3) {
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+footer {
+  margin-top: 1%;
 }
 footer small {
   display: flex;
