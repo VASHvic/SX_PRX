@@ -18,7 +18,7 @@
     />
     <meta property="”og:url”" content="localhost/index.html" />
     <link rel="icon" type="image/vnd.microsoft.icon" href="./img/img1.png" />
-    <link id="estilos" rel="stylesheet" href="./css/estilo1.css" />
+    <link id="estilos" rel="stylesheet" href="./css/normal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -38,9 +38,13 @@
     <header>
       <h1>Currículum Vitae</h1>
       <span id="botones">
-        <button id="vo" onclick="cambioEstilos(1)"><p>VO</p></button>
-        <button id="moderno" onclick="cambioEstilos(2)"><p>Moderno</p></button>
-        <button id="retro" onclick="cambioEstilos(3)"><p>Retro</p></button>
+        <button id="vo" onclick="cambioEstilos('normal')"><p>VO</p></button>
+        <button id="moderno" onclick="cambioEstilos('moderno')">
+          <p>Moderno</p>
+        </button>
+        <button id="retro" onclick="cambioEstilos('retro')">
+          <p>Retro</p>
+        </button>
       </span>
       <nav id="link">
         <a href="#exp">Experiencia</a>
@@ -230,7 +234,7 @@
     </footer>
     <script>
       function cambioEstilos(estilo) {
-        document.getElementById("estilos").href = `./css/estilo${estilo}.css`;
+        document.getElementById("estilos").href = `./css/${estilo}.css`;
       }
     </script>
   </body>
