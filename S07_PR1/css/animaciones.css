@@ -127,3 +127,65 @@ section#otros table tr td {
   width: 20%;
   padding: 5px;
 }
+/*Añadido en CSS Animaciones */
+
+nav#link a:hover {
+  text-decoration: underline;
+}
+
+header span#botones button:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+header span#botones button,
+#info-personal i,
+.foto {
+  animation-name: aparecer;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+}
+main .foto:hover,
+.logoeduc:hover {
+  transform: scale(1.5, 1.5);
+}
+header h1 {
+  animation-duration: 1s;
+  animation-name: deslizar;
+  animation-fill-mode: backwards;
+}
+h3 {
+  transition-timing-function: ease;
+}
+section:hover h3 {
+  color: hotpink;
+  animation-name: rosa;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  transition-timing-function: ease;
+}
+
+@keyframes rosa {
+  from {
+    transform: scale(1) translateX(0rem);
+  }
+  to {
+    transform: scale(1.3) translateX(23rem);
+  }
+}
+
+@keyframes deslizar {
+  from {
+    transform: translateX(-50rem) scale(0.1, 0.1);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

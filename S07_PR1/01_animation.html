@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo Animaciones</title>
+	<style type="text/css">
+		@charset "utf-8"; /* Siempre si CSS externo */
+		/** MAS DIRECTIVAS: KEYFRAMES **/
+		@keyframes anim1{ /* No funciona hasta que alguien lo invoque */
+			from{ /* 0%*/
+				background-color: blue;	
+				box-shadow: 1px 1px 1px red;
+			}
+			
+			20%{ transform: translate(0,0); }
+			50%{ transform: translate(0,0) rotate(720deg);  }
+			
+			to{ /* 100% */
+				background-color: red;
+				box-shadow: 2px 2px 3px yellow;
+				transform: translate(4rem,0);
+			}
+		}
+		
+		@keyframes anim2{
+			0%{
+				background-color: blue;	
+				box-shadow: 1px 1px 1px red;
+			}
+
+			30%{
+				background-color: red;	
+				box-shadow: 2px 2px 2px blue;
+				transform: translateX(15rem);
+			}
+
+			60%{
+				transform: translateX(15rem) rotate(360deg);
+			}
+
+			62%, 82%{
+				box-shadow: 2px 2px 6px yellow;
+			}
+
+			72%, 92%{
+				box-shadow: 2px 2px 2px blue;
+			}
+
+			100%{
+				transform: translateX(8rem) rotate(-180deg);
+				background-color: green;
+			}
+
+		}
+
+		/* Mini Animaciones Concatenadas */
+		@keyframes anim3a{
+			from{ background-color: green; }
+			to{ 
+				background-color: blue;
+				transform: translateX(10rem);
+			}
+		}
+
+		@keyframes anim3b{
+			from{}
+			to{ transform: translateX(10rem) scale(1.5,1.5); }
+		}
+
+		@keyframes anim3c{
+			from{ transform: translateX(10rem) scale(1.5,1.5)rotate(0deg); }
+			to{ transform: translateX(10rem) scale(1.5,1.5)rotate(360deg);}
+		}
+
+
+		/* SELECTORES */
+		*{  margin:0; padding: 0;
+			box-sizing: border-box;
+		}
+
+		:root{
+			font-family: "Arial", sans-serif;
+			font-size: 15px;
+		}
+
+		/***** Ejemplo de Transitions Concatenadas ****/
+		header h1{
+			font-size: 1.8rem;
+			margin: 3em;
+			-webkit-text-stroke: 2px red;
+			color: transparent;
+			/* transition: -webkit-text-stroke 2s ease, transform 2s 2s, ... ; */
+
+			transition-property:-webkit-text-stroke, letter-spacing, transform;
+			transition-duration: 2s, 2.5s, 1.5s;
+			transition-delay: 0s, 2s, 4.5s; /* Concatenando */
+			transition-timing-function: ease, linear, ease-in ;
+		}
+
+		body:hover header h1{ /* Al pasar por encima de Body */
+			-webkit-text-stroke: 2px blue;
+			letter-spacing: 0.5em;
+			transform: rotate(3deg) scale(1.2, 1.2) translate(1em, 0);
+		}
+
+		/*** Ejemplos Animaciones con KEYFRAMES ***/
+		main div{
+			margin:  2rem;
+		}
+		section>div{
+			width: 5rem; height: 5rem;
+			border: 1px solid black;
+		}
+
+		section>div#d1{
+			animation-name: anim1;
+			animation-duration: 9s;
+			animation-fill-mode: forwards;
+			animation-play-state: paused;
+		}
+
+		section>div#d2{
+			animation-name: anim2;
+			animation-duration: 4s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: 4;
+			animation-direction: alternate;
+			
+		}
+
+		section>div#d3{
+			/* animation-name: anim3a, anim3b, anim3c; */
+
+			/* SHORTHAND */
+			animation: anim3a 1.4s ease forwards, anima3b 2s 1.4s ease-out forwards, anim3c 2s 3.4s ease-out infinite forwards;
+		}
+
+
+	</style>
+</head>
+<body>
+	<header><h1>Ejemplo Animaciones</h1></header>
+	<main>
+		<section>
+			<div id="d1"></div>
+			<p> <button onclick="playAnim1();">Play </button></p>	
+		</section>
+		<section>
+			<div id="d2"></div>	
+		</section>
+		<section>
+			<div id="d3"></div>	
+		</section>
+
+	</main>
+<script>
+	function playAnim1(){
+		document.getElementById('d1').style.animationPlayState='running';
+	}
+</script>
+</body>
+</html>

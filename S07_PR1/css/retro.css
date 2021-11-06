@@ -48,6 +48,9 @@ section img.logoeduc {
 #moderno + * {
   background-color: tomato;
 }
+#animaciones {
+  background-color: hotpink;
+}
 header p {
   color: white;
 }
