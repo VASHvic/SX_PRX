@@ -6,18 +6,22 @@
 :root {
   font-size: 16px;
   text-align: center;
+  align-items: center;
+  background: chocolate;
 }
 header {
-  margin-top: 1%;
+  margin: 1% auto;
 }
 
 /*Ejercicio 1*/
-section#ej1 > * {
-  margin: 2% auto;
+section#ej1 {
+  background: burlywood;
 }
+
 section #banner {
   width: 640px;
   height: 413px;
+  margin: 0 auto;
   background-size: 100% 100%;
   animation: slider 8s infinite;
 }
@@ -53,7 +57,8 @@ section#ej2 {
   height: 30vh;
 }
 
-#titulo2 {
+#titulo2,
+#titulo3 {
   color: #fff;
 }
 section#ej2 a {
@@ -125,4 +130,67 @@ section#ej2 a:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
+}
+
+/*Ejercicio 3*/
+
+section#ej3 {
+  background: #262626;
+  height: 500px;
+  position: relative;
+  color: lightsteelblue;
+  font-size: 19px;
+}
+section#ej3 .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border-bottom: 4px solid #fff;
+  animation: animate 2.25s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+section#ej3 .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: bounce 2.25s linear infinite;
+  background: limegreen;
+}
+@keyframes bounce {
+  0% {
+    top: calc(50% + 45px);
+    left: calc(50% + 20px);
+  }
+  25% {
+    top: calc(50% - 90px);
+    left: calc(50% + 20px);
+  }
+  50% {
+    top: calc(50% - 55px);
+    left: calc(50% + 35px);
+  }
+  75% {
+    top: calc(50% - 75px);
+    left: calc(50% + 25px);
+  }
+  100% {
+    top: calc(50% + 45px);
+    left: calc(50% + 20px);
+  }
 }
