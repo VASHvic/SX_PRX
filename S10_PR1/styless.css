@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("./img/background.jpg");
+}
+body {
+  width: 80%;
+  margin: 0 auto;
+  display: table;
+}
+
+header#header {
+  display: table-row;
+  background: turquoise;
+  height: 20vh;
+}
+#header div#seccion1 {
+  background: slategrey;
+}
+#header div#seccion2 {
+  background-image: url("./img/logo_oliva.png");
+  height: 100px;
+}
+nav#nav1 {
+  display: table-row;
+  background: crimson;
+}
+main#main {
+  display: table-row;
+  background: hotpink;
+}
+#aside_article_container {
+  display: table-row-group;
+}
+h1#titulo_main {
+  display: table-row;
+  background: greenyellow;
+}
+nav#aside_main {
+  display: table-cell;
+  background: chocolate;
+}
+
+#info {
+  display: table-cell;
+  background: greenyellow;
+}
+#footer {
+  display: table-row;
+  background: goldenrod;
+}
