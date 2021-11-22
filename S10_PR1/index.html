@@ -10,21 +10,41 @@
   <body>
     <header id="header">
       <div id="seccion1">
-        <img src="./img/face_twit.png" alt="logo faceboock y twiter" />
+        <div id="contenedor_logos">
+          <img
+            id="logos"
+            src="./img/face_twit.png"
+            alt="logo faceboock y twiter"
+          />
+          <span>facebook: /AjuntamentOliva twitter: @AjuntamentOliva</span>
+        </div>
       </div>
-      <div id="seccion2"></div>
+      <div id="seccion2">
+        <div><img src="./img/logo_oliva.png" alt="" /></div>
+      </div>
     </header>
     <nav id="nav1">
-      <a href="">Inicio</a>
-      <a href="">Areas</a>
-      <a href="">Contacto</a>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="areas.html">Áreas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </nav>
+    <h1 id="titulo_main">Áreas | Turismo</h1>
     <main id="main">
-      <h1 id="titulo_main">Áreas | Turismo</h1>
-      <div id="aside_article_container">
-        <nav id="aside_main">aside</nav>
-        <article id="info">article</article>
-      </div>
+      <nav id="aside_main">
+        <ul id="aside_list">
+          <li>Inicio</li>
+          <li>Áreas</li>
+          <ul id="lista_anidada">
+            <li>Territorio</li>
+            <li>Area Social</li>
+            <li>Turismo</li>
+          </ul>
+          <li>Contacto</li>
+        </ul>
+      </nav>
+      <article id="info">article</article>
     </main>
     <footer id="footer">footer</footer>
   </body>

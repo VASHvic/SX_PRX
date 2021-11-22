@@ -1,54 +1,88 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 :root {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("./img/background.jpg");
+  font-size: 16px;
 }
 body {
   width: 80%;
   margin: 0 auto;
-  display: table;
+}
+/*HEADER*/
+#header div#seccion1 {
+  background: #000;
+  opacity: 0.8;
+  color: #fff;
+  display: flex;
+  justify-content: end;
+}
+#header div#seccion1 #logos {
+  width: 80px;
+}
+#header div#seccion1 #contenedor_logos {
+  width: fit-content;
 }
 
-header#header {
-  display: table-row;
-  background: turquoise;
-  height: 20vh;
-}
-#header div#seccion1 {
-  background: slategrey;
-}
-#header div#seccion2 {
-  background-image: url("./img/logo_oliva.png");
-  height: 100px;
-}
+/*NAV1*/
 nav#nav1 {
-  display: table-row;
-  background: crimson;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 16pt;
+  background: lightblue;
+  opacity: 0.8;
 }
-main#main {
-  display: table-row;
-  background: hotpink;
+nav#nav1 li {
+  list-style: none;
+  display: inline;
 }
-#aside_article_container {
-  display: table-row-group;
+nav#nav1 a {
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: black;
+}
+nav#nav1 a:hover {
+  background: tomato;
+}
+nav#nav1 a:visited {
+  color: black;
 }
 h1#titulo_main {
-  display: table-row;
-  background: greenyellow;
+  background: #fff;
+  opacity: 0.8;
+  color: green;
+  padding: 0.5rem;
+  border-bottom: 5px solid green;
 }
-nav#aside_main {
-  display: table-cell;
-  background: chocolate;
+/*MAIN*/
+main#main {
+  display: table;
+  background: hotpink;
+  width: 100%;
 }
 
-#info {
+nav#aside_main {
   display: table-cell;
+  width: 20%;
+  background: lightblue;
+  padding: 1.4rem;
+}
+nav#aside_main #aside_list,
+nav#aside_main #aside_list #lista_anidada {
+  list-style: none;
+}
+nav#aside_main #aside_list #lista_anidada {
+  margin-left: 1rem;
+}
+article#info {
+  display: table-cell;
+  width: 80%;
   background: greenyellow;
 }
+/*FOOTER*/
 #footer {
-  display: table-row;
   background: goldenrod;
 }
