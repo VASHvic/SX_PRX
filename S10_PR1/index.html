@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styless.css" />
+    <link rel="stylesheet" id= "estilos" href="./display-table.css" />
     <title>Ayuntamiento Oliva</title>
   </head>
   <body>
     <header id="header">
       <div id="seccion1">
+        <span id="botones">
+          <button id="button_table" onclick="cambioEstilos('display-table')"><p>Display Table</p></button>
+          <button id="button_inline_block" onclick="cambioEstilos('display-inline-block')"><p>Display Inline-Block</p></button>
+        </span>
         <div id="contenedor_logos">
           <img
             id="logos"
@@ -34,18 +38,53 @@
     <main id="main">
       <nav id="aside_main">
         <ul id="aside_list">
-          <li>Inicio</li>
-          <li>Áreas</li>
+          <li id="li_aside">Inicio</li>
+          <li id="li_aside">Áreas</li>
           <ul id="lista_anidada">
             <li>Territorio</li>
             <li>Area Social</li>
             <li>Turismo</li>
           </ul>
-          <li>Contacto</li>
+          <li id="li_aside">Contacto</li>
         </ul>
       </nav>
-      <article id="info">article</article>
+      <article id="info">
+        <table id="tabla_main">
+          <tr>
+            <th colspan="2"><h2>TOURIST INFO OLIVA</th></h2>
+          </tr>
+          <tr>
+            <td>Dirección</td>
+            <td>Ps.Lluis Vives s/n</td>
+          </tr>
+          <tr>
+            <td>Horario</td>
+            <td>L-V de 10:00 a 14:00</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Contacto</td>
+            <td>Tel: 96 285 0002</td>
+          </tr>
+          <tr>
+            <td>
+              email:
+              <a href="mailto:oliva@touristinfo.net">oliva@touristinfo.net</a>
+            </td>
+          </tr>
+        </table>
+        <img id= "imagen_tabla" src="./img/tourist.jpg" alt="Imagen interior ayuntamiento">
+      </article>
     </main>
-    <footer id="footer">footer</footer>
-  </body>
+    <footer id="footer">
+      <p id="footer_contacto">Pl. Ajuntament, 1 46780 Oliva, Tel: 96285 0001</p>
+      <div id="contenedor_silueta">
+        <img id = "w3c_logo" src="./img/w3c.png" alt="">       
+      </div>      
+    </footer>
+    <script>
+      function cambioEstilos(estilo) {
+        document.getElementById("estilos").href = `./${estilo}.css`;
+      }
+    </script>
+  </body> 
 </html>

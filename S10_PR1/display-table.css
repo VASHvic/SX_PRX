@@ -6,6 +6,8 @@
 :root {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("./img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-size: 16px;
 }
 body {
@@ -18,7 +20,16 @@ body {
   opacity: 0.8;
   color: #fff;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+}
+#header #botones {
+  align-self: center;
+  margin-left: 0.3rem;
+}
+#header #botones button {
+  padding: 0.3rem;
+  background: slategray;
+  color: white;
 }
 #header div#seccion1 #logos {
   width: 80px;
@@ -60,29 +71,75 @@ h1#titulo_main {
 /*MAIN*/
 main#main {
   display: table;
-  background: hotpink;
+  background: #fff;
   width: 100%;
 }
+/*MAIN ASIDE*/
 
 nav#aside_main {
   display: table-cell;
   width: 20%;
   background: lightblue;
-  padding: 1.4rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+#aside_list li {
+  margin-bottom: 0.3rem;
 }
 nav#aside_main #aside_list,
 nav#aside_main #aside_list #lista_anidada {
   list-style: none;
 }
+#aside_list li:hover:not(#lista_anidada li) {
+  color: tomato;
+}
+
+#lista_anidada li:hover {
+  text-decoration: underline;
+}
 nav#aside_main #aside_list #lista_anidada {
   margin-left: 1rem;
 }
+/*MAIN ARTICLE*/
 article#info {
   display: table-cell;
-  width: 80%;
-  background: greenyellow;
+  width: 100%;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+#tabla_main {
+  width: 50%;
+}
+article#info #tabla_main td {
+  border: 1px dotted tomato;
+  padding: 0.2rem 0.5rem;
+}
+article#info #tabla_main th {
+  text-align: left;
+  color: blue;
+  letter-spacing: 2px;
+}
+
+#imagen_tabla {
+  height: 25vh;
+  width: 300px;
 }
 /*FOOTER*/
-#footer {
-  background: goldenrod;
+
+#footer_contacto {
+  color: grey;
+  background: lightgrey;
+  font-size: small;
+  font-style: italic;
+}
+#footer #contenedor_silueta {
+  height: 120px;
+  background: darkgrey;
+  background-image: url("./img/silueta.png");
+}
+
+#w3c_logo {
+  height: 50px;
+  float: right;
 }
