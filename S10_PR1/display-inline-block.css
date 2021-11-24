@@ -44,6 +44,7 @@ nav#nav1 {
   font-size: 16pt;
   background: lightblue;
   opacity: 0.8;
+  padding: 0.5rem;
 }
 nav#nav1 li {
   list-style: none;
@@ -67,6 +68,7 @@ h1#titulo_main {
   color: green;
   padding: 0.5rem;
   border-bottom: 5px solid green;
+  margin-bottom: -5px;
 }
 /*MAIN*/
 main#main {
@@ -82,8 +84,14 @@ nav#aside_main {
   width: 20%;
   background: lightblue;
   padding: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 0px;
   margin-right: -30px;
+  margin-top: -200px;
+  height: 200px;
+}
+#aside_list {
+  font-size: 1.2rem;
+  margin-left: 5%;
 }
 #aside_list li {
   margin-bottom: 0.3rem;
@@ -107,13 +115,13 @@ article#info {
   display: inline-block;
   width: 80%;
   padding: 1.2rem;
-  display: flex;
-  justify-content: space-between;
+  font-size: 0px;
 }
 #tabla_main {
   width: 50%;
   display: inline-block;
   font-size: 1rem;
+  margin-left: 100px;
 }
 article#info #tabla_main td {
   border: 1px dotted tomato;
@@ -126,7 +134,7 @@ article#info #tabla_main th {
 }
 
 #imagen_tabla {
-  height: 25vh;
+  height: 145px;
   width: 300px;
 }
 /*FOOTER*/
@@ -144,6 +152,5 @@ article#info #tabla_main th {
 }
 
 #w3c_logo {
-  height: 50px;
   float: right;
 }
