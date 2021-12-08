@@ -4,36 +4,7 @@
   font-family: youre_gone;
   src: url("./ttf/youre_gone.ttf");
 }
-@media (max-width: 796px) {
-  #header {
-    all: unset;
-    display: grid;
-    justify-items: center;
-    grid-template-rows: repeat(2, 1fr);
-  }
-  #header > * {
-    width: 100px;
-  }
-  #header #contenedor-banderas {
-    grid-row: 2/3;
-  }
-  nav#navbar {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    place-items: center;
-  }
-  form#buscador {
-    grid-area: nav;
-  }
-  article#ficha {
-    grid-area: mai;
-  }
-  #contacto,
-  #lista li {
-    display: none;
-  }
-}
+
 @keyframes navchange {
   from {
     /*vacio porque el linear gradient del navhacía un efecto estraño*/
@@ -247,4 +218,49 @@ nav#navbar {
 #header span#botones button {
   padding: 0.5rem;
   margin-right: 0.3rem;
+}
+
+@media (max-width: 796px) {
+  body {
+    width: 100vw;
+  }
+  #header {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+  #header #contenedor-logo {
+    width: 40vw;
+    grid-column: 1/3;
+  }
+  #header #contenedor-logo img {
+    width: 100%;
+  }
+  #header #contenedor-banderas {
+    margin: 0 auto;
+  }
+  #header #contenedor-banderas > * {
+    margin: 0.2rem;
+  }
+  nav#navbar {
+    grid-template-columns: 1fr;
+  }
+  form#buscador {
+    margin: 0 auto;
+  }
+  #main {
+    all: unset;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: 4rem;
+  }
+  article#ficha {
+    grid-area: mai;
+    margin: 0 auto;
+  }
+  #contacto,
+  #lista li {
+    display: none;
+  }
 }
