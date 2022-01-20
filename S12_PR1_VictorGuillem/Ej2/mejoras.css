@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: youre_gone;
+  src: url("./ttf/youre_gone.ttf");
+}
+
+@keyframes navchange {
+  from {
+    /*vacio porque el linear gradient del navhacía un efecto estraño*/
+  }
+  to {
+    background-color: aliceblue;
+    color: #000;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    bottom: -200px;
+    position: fixed;
+  }
+  100% {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+}
+body {
+  background: lightgrey;
+  display: grid;
+  grid-template-areas:
+    "hdr"
+    "nav"
+    "mai";
+}
+#header {
+  grid-area: hdr;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: #fff;
+  padding: 0.5rem 8rem;
+}
+
+#header #contenedor-banderas {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80px;
+}
+#header #contenedor-banderas * {
+  cursor: pointer;
+}
+nav#navbar {
+  background-color: #000;
+  background-image: linear-gradient(black, grey);
+  padding: 0.5rem 8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#navbar #lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  font-family: "youre_gone";
+}
+#navbar #lista li a {
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 2rem;
+}
+#navbar #lista li a:hover {
+  animation: navchange 0.5s forwards;
+}
+
+#navbar #buscador {
+  justify-self: end;
+}
+#navbar #buscador input {
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+}
+#navbar #buscador button {
+  padding: 0.5rem;
+  flex: 1;
+  cursor: pointer;
+}
+#main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem 5rem;
+  gap: 5rem;
+}
+#main #ficha {
+  background: slategray;
+  color: #fff;
+  height: fit-content;
+}
+#main #ficha .titulo-ficha {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  padding: 0.4rem;
+}
+
+#main #ficha #contenedor-info {
+  display: flex;
+  text-align: center;
+  font-size: 1.5rem;
+}
+#main #ficha #contenedor-info #ref {
+  flex: 1;
+  padding: 0.3rem;
+}
+#main #ficha #contenedor-info #info {
+  flex: 1;
+  background: red;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+#main #ficha #imagen-parcela {
+  width: 100%;
+  opacity: 0.8;
+}
+#main #ficha #imagen-parcela:hover {
+  opacity: 1;
+}
+#main #logos-redes {
+  display: flex;
+  justify-content: end;
+}
+#main #logos-redes a {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+#main #contacto {
+  width: 85%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0 4rem 0 4rem;
+  height: fit-content;
+}
+#contacto form p > input:not(#acepto) {
+  width: 100%;
+  height: 1.7rem;
+}
+#contacto form p > label {
+  font-size: 1.2rem;
+}
+#contacto form button {
+  width: 100%;
+  padding: 0.2rem;
+}
+#main #contacto textarea {
+  width: 100%;
+  height: 15rem;
+}
+#main #contacto > p,
+#main #contacto form > p:nth-child(even),
+#main #contacto form p > #acepto {
+  margin-bottom: 5%;
+}
+
+#cookies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  font-size: 1.3rem;
+  background-color: slategray;
+  left: 0;
+  right: 0;
+  animation: aparecer 2s forwards;
+  color: #fff;
+}
+#cookies button {
+  all: unset;
+  padding: 0.5rem;
+}
+#cookies #cookie-rechazar {
+  background-color: red;
+  cursor: pointer;
+}
+#cookies #cookie-aceptar {
+  background-color: limegreen;
+  margin-right: 0.2rem;
+  cursor: pointer;
+}
+
+#contenedor-mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#contenedor-mapa #gmap-canvas {
+  width: 100%;
+}
+
+#header span#botones {
+  align-self: center;
+}
+#header span#botones button {
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+}
+
+@media (max-width: 796px) {
+  body {
+    width: 100vw;
+  }
+  #header {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+  #header #contenedor-logo {
+    width: 40vw;
+    grid-column: 1/3;
+  }
+  #header #contenedor-logo img {
+    width: 100%;
+  }
+  #header #contenedor-banderas {
+    margin: 0 auto;
+  }
+  #header #contenedor-banderas > * {
+    margin: 0.2rem;
+  }
+  nav#navbar {
+    grid-template-columns: 1fr;
+  }
+  form#buscador {
+    margin: 0 auto;
+  }
+  #main {
+    all: unset;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding: 4rem;
+  }
+  article#ficha {
+    grid-area: mai;
+    margin: 0 auto;
+  }
+  #contacto,
+  #lista li {
+    display: none;
+  }
+}

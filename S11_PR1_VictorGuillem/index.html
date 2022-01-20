@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" id="estilos" href="./normal.css" />
+  <title>S11 PR1</title>
+</head>
+
+<body>
+  <header id="header">
+    <div id="contenedor-logo">
+      <img src="./img/logo.png" alt="logo de empresa" id="logo" />
+    </div>
+    <span id="botones">
+      <button id="button_normal" onclick="cambioEstilos('normal')">
+        <p>V Normal</p>
+      </button>
+      <button id="button_mejorada" onclick="cambioEstilos('mejoras')">
+        <p>V Mejorada</p>
+      </button>
+    </span>
+    <div id="contenedor-banderas">
+      <img src="./img/bandera_esp.png" alt="bandera española" />
+      <img src="./img/bandera_ing.png" alt="bandera inglesa" />
+      <img src="./img/bandera_fra.png" alt="bandera francesa" />
+      <img src="./img/bandera_ale.png" alt="bandera alemana" />
+  </header>
+  <nav id="navbar">
+    <ul id="lista">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#venta">VENTA</a></li>
+      <li><a href="#alquiler">ALQUILER</a></li>
+      <li><a href="#contacto">CONTACTO</a></li>
+    </ul>
+    <form id="buscador">
+      <input type="text">
+      <button type="submit">Buscar</button>
+    </form>
+  </nav>
+  <main id="main">
+    <article id="ficha">
+      <h3 id="titulo-ficha" class="titulo-ficha">Parcela Urbana en Miramar</h3>
+      <div id="contenedor-info">
+        <div id="ref">Ref: P333555A</div>
+        <div id="info">+Info</div>
+      </div>
+      <div id="contenedor-parcela">
+        <img id="imagen-parcela" src="./img/Parcela1.jpg" alt="imagen de la parcela">
+      </div>
+      <div id="contenedor-mapa" class="mapouter hidden">
+        <h3 class="titulo-ficha">Dónde estamos:</h3>
+        <div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=paseo%20germanias%20gandia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+            href="https://2piratebay.org"></a><br>
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 400px;
+              width: 400px;
+            }
+          </style><a href="https://www.embedgooglemap.net">embedding maps in website</a>
+          <style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 400px;
+              width: 400px;
+            }
+          </style>
+        </div>
+      </div>
+      <div id="logos-redes">
+        <a><img src="./img/facebook.png" alt="logo facebook"></a>
+        <a><img src="./img/twitter.png" alt="logo twitter"></a>
+        <a><img src="./img/instagram.png" alt="logo instagram"></a>
+      </div>
+
+    </article>
+    <aside id="contacto">
+      <p>Envía email a <a href="mailto:info@inmcan.eu">info@inmcan.eu</a></p>
+      <p>O rellena este Formulario</p>
+      <form action="procesa.php" method="get">
+        <p><label for="name">Nombre:</label></p>
+        <p><input type="text" id="name" for="name" maxlength="75" autofocus required></p>
+        <p><label for="email">Email:</label></p>
+        <p><input type="email" id="email" for="email" maxlength="75" required
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"></p>
+        <p><label for="mensaje">Mensaje:</label></p>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+          placeholder="En el mensaje cita la referencia del inmueble" maxlength="300"></textarea>
+        <p><input type="checkbox" name="acepto" id="acepto" checked> <label for="acepto">Sí, acepto la política de
+            privacidad</label></p>
+        <button type="submit">Enviar</button>
+      </form>
+    </aside>
+  </main>
+  <footer id="cookies" class="hidden">
+    <p>Utilizamos cookies propias y de terceros durante la navegación por el sitio web, con la finalidad de permitir el
+      acceso a las funcionalidades de la página web, extraer estadísticas de tráfico y mejorar la experiencia del
+      usuario.</p>
+    <div id="opciones-cookies">
+      <button id="cookie-aceptar" onclick="desaparecer()">Acepar</button>
+      <button id="cookie-rechazar" onclick="desaparecer()">Rechazar</button>
+    </div>
+  </footer>
+  <script>
+    function cambioEstilos(estilo) {
+      document.getElementById("estilos").href = `./${estilo}.css`;
+    }
+    function desaparecer() {
+      document.getElementById("cookies").style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
