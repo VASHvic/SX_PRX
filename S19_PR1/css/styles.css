@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+}
+body {
+  padding: 0 0.5rem;
+  width: 95%;
+}
+header > img {
+  display: none;
+}
+header > h1 {
+  text-align: center;
+}
+
+nav#principal li a,
+article p > button {
+  all: unset;
+  background-color: red;
+  display: block;
+  text-align: center;
+  margin: 0.3rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main section#texto p {
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 1rem 0;
+}
+
+main section#texto p:not(:first-child, :nth-child(2)),
+main section#texto h3 {
+  display: none;
+}
+
+article {
+  outline: 2px solid blue;
+  padding: 1rem;
+  width: 65%;
+  margin: 0 auto;
+}
+article p img {
+  width: 100%;
+  height: auto;
+  border: 2px solid red;
+}
+article p:not(:first-child) {
+  display: block;
+  text-align: center;
+}
+
+article p > button {
+  margin: 0 auto;
+}
+article:not(:first-child) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 0.5rem 1.5rem;
+    color: blue;
+  }
+  header {
+    margin-bottom: 0.5rem;
+  }
+  header > img {
+    display: block;
+  }
+  nav#principal ul {
+    display: flex;
+    justify-content: center;
+  }
+  header > h1 {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  nav#principal li {
+    margin-right: 2rem;
+    width: 22%;
+  }
+  nav#principal li a {
+    padding: 0.8rem;
+    border-radius: 35px;
+  }
+  main section#texto {
+    column-count: 2;
+    margin: 1rem 0;
+  }
+  main section#texto p {
+    column-fill: auto;
+    margin: 0;
+  }
+  section#ventas {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  section#ventas article {
+    width: 35%;
+  }
+  section article:nth-child(2) {
+    display: block;
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    background-color: slategray;
+  }
+
+  body {
+    color: green;
+    width: 95%;
+    height: 100vh;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+  }
+  header > img {
+    margin-right: 1rem;
+  }
+
+  section#ventas article {
+    display: block;
+  }
+  nav#principal {
+    /*Hacer grid*/
+  }
+  section#texto {
+  }
+}
