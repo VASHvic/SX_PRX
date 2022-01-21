@@ -125,25 +125,57 @@ article:not(:first-child) {
   }
 
   body {
+    display: grid;
+    grid-template-areas:
+      "hdr hdr hdr hdr"
+      "btn mai mai mai"
+      "btn mai mai mai"
+      "btn mai mai mai";
+    grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(4, 1fr));
     color: green;
     width: 95%;
     height: 100vh;
     background-color: #fff;
     margin: 0 auto;
   }
+
   header {
+    grid-area: hdr;
     display: flex;
+    gap: 1rem;
   }
-  header > img {
-    margin-right: 1rem;
+  header img {
+    max-width: 350px;
+    max-height: 100px;
   }
 
-  section#ventas article {
-    display: block;
-  }
   nav#principal {
-    /*Hacer grid*/
+    grid-area: btn;
   }
-  section#texto {
+  nav#principal ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav#principal ul a {
+    border-radius: 0.3rem;
+    width: 10rem;
+  }
+  main {
+    grid-area: mai;
+  }
+  #mapa {
+    display: block !important;
+  }
+  #mapa iframe {
+    width: 23rem;
+    height: 23rem;
+  }
+  section#ventas {
+    width: 75%;
+  }
+  section article:nth-child(3),
+  section article:nth-child(4) {
+    display: block;
   }
 }
