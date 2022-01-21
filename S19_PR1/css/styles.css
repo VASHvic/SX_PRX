@@ -168,11 +168,12 @@ article:not(:first-child) {
     display: block !important;
   }
   #mapa iframe {
-    width: 23rem;
-    height: 23rem;
+    width: fit-content;
+    height: fit-content;
   }
   section#ventas {
-    width: 75%;
+    display: flex;
+    justify-content: center;
   }
   section article:nth-child(3),
   section article:nth-child(4) {
