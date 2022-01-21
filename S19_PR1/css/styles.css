@@ -70,6 +70,9 @@ article p > button {
 article:not(:first-child) {
   display: none;
 }
+#mapa-container {
+  display: none;
+}
 
 @media (min-width: 768px) {
   body {
@@ -127,12 +130,12 @@ article:not(:first-child) {
   body {
     display: grid;
     grid-template-areas:
-      "hdr hdr hdr hdr"
-      "btn mai mai mai"
-      "btn mai mai mai"
-      "btn mai mai mai";
-    grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(4, 1fr));
+      "hdr hdr hdr hdr hdr"
+      "btn mai mai mai map"
+      "btn mai mai mai map"
+      ". mai mai mai .";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     color: green;
     width: 95%;
     height: 100vh;
@@ -160,17 +163,21 @@ article:not(:first-child) {
   nav#principal ul a {
     border-radius: 0.3rem;
     width: 10rem;
+    align-items: center;
   }
   main {
     grid-area: mai;
   }
-  #mapa {
+  main p:nth-child(4) {
     display: block !important;
   }
-  #mapa iframe {
-    width: fit-content;
-    height: fit-content;
+  #mapa-container {
+    display: flex;
+    justify-content: center;
+    grid-area: map;
+    margin-left: 0.8rem;
   }
+
   section#ventas {
     display: flex;
     justify-content: center;
