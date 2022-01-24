@@ -6,7 +6,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  /* border: 1px solid red; */
+  border: 1px solid green;
 }
 
 :root {
@@ -17,11 +17,11 @@
   background-color: var(--primary-color);
 }
 body {
-  width: 95%;
+  width: 97%;
   margin: 0 auto;
   background-color: rgb(73, 73, 73);
 }
-body * {
+body *:not(header) {
   margin-top: 0.5rem;
 }
 .titol {
@@ -32,6 +32,9 @@ header {
   height: 10vh;
   display: flex;
   justify-content: space-between;
+}
+header #navbar {
+  display: none;
 }
 header div {
   width: 40%;
@@ -66,12 +69,46 @@ main article#pasio > img {
   width: 100%;
 }
 #proxims-concerts table td {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid --secondary-color;
   border-top: 1px solid black;
   text-align: left;
   padding: 5px;
 }
-main #qui-som p {
+main article#qui-som {
+  padding: 0.3rem;
+}
+main article#qui-som p {
   text-align: justify;
-  padding: 0.5rem;
+}
+
+main article#qui-som img {
+  width: 100%;
+}
+
+@media (min-width: 960px) {
+  :root {
+    font-size: 25px;
+  }
+  header {
+    background-color: black;
+    height: 18vh;
+    padding: 0.8rem 0;
+  }
+  header #container-menu {
+    display: none;
+  }
+  header #container-logo {
+    width: 30%;
+  }
+  header #container-logo > img {
+    width: 50px;
+  }
+  header #navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+  }
+  header #navbar a {
+    color: #fff;
+  }
 }
