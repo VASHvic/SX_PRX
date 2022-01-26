@@ -6,32 +6,35 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 :root {
   font-size: 18px;
   color: #fff;
-  --primary-color: #ff5e0e;
+  --primary-color: #ddc153;
   --secondary-color: #008575;
   background-color: var(--primary-color);
 }
 body {
-  width: 97%;
+  width: 100%;
   margin: 0 auto;
-  background-color: rgb(73, 73, 73);
+  background-color: #8a8686;
 }
 body *:not(header) {
   margin-top: 0.5rem;
 }
 .titol {
   text-align: center;
+  font-weight: bolder;
+  font-size: 1.8rem;
   color: var(--primary-color);
 }
 header {
-  height: 10vh;
+  height: 12vh;
   display: flex;
   justify-content: space-between;
+  background-color: #333;
 }
 header #navbar {
   display: none;
@@ -44,7 +47,7 @@ header div {
 }
 
 header div#container-logo > img {
-  height: 200%;
+  height: 140%;
   width: 100%;
 }
 header div#container-menu > img {
