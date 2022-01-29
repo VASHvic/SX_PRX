@@ -26,7 +26,7 @@ header {
   height: 25vh;
 }
 nav {
-  height: 100%;
+  height: 80%;
 }
 footer {
   height: 15vh;
@@ -69,29 +69,31 @@ footer p {
     gap: 3rem;
     margin-top: 1rem;
   }
-  @media (min-width: 960px) {
-    body {
-      display: grid;
-      grid-template-areas:
-        "hea hea hea hea"
-        "mai mai mai foo"
-        "mai mai mai foo"
-        "mai mai mai foo"
-        "mai mai mai foo"
-        "not not not foo";
-    }
-    header {
-      grid-area: hea;
-    }
-    main {
-      grid-area: mai;
-    }
-    footer {
-      grid-area: not;
-      background-color: violet;
-    }
-    footer ul {
-      grid-area: foo;
-    }
+}
+@media (min-width: 960px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "hea hea hea hea"
+      "mai mai mai foo"
+      "mai mai mai foo"
+      "mai mai mai foo"
+      "mai mai mai foo"
+      "not not not foo";
+  }
+  header {
+    grid-area: hea;
+  }
+  main {
+    grid-area: mai;
+    height: 70vh;
+  }
+  footer {
+    grid-area: foo;
+    height: 100%;
+  }
+  #nota {
+    grid-area: not;
+    height: 10vh;
   }
 }

@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+header,
+footer {
+  background-color: lightgreen;
+}
+nav {
+  background-color: cyan;
+}
+article[id^="not"] {
+  background-color: lightblue;
+}
+article[id^="art"] {
+  background-color: grey;
+}
+article[id^="bann"] {
+  background-color: orange;
+}
+header,
+nav,
+article,
+footer {
+  border: 2px solid white;
+  text-align: center;
+  padding: 1rem 0;
+}
+/*****************/
+/*VISTA MOVIL*/
+/******************/
+
+:root {
+  font-family: "Times New Roman", serif;
+  font-size: 3.3vw;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "nt"
+    "vt"
+    "nv"
+    "bn";
+}
+header {
+  grid-area: hd;
+}
+nav {
+  grid-area: nv;
+}
+section#noticias {
+  grid-area: nt;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section#ventas {
+  grid-area: vt;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section#banners {
+  grid-area: bn;
+}
+
+/*** Cosas ocultas movil ***/
+footer {
+  grid-area: ft;
+  display: none;
+}
+section#banners article#bann1 {
+  display: none;
+}
+/*******************/
+/**Estilos TABLET**/
+/******************/
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 1.7vw;
+  }
+  body {
+    width: 95%;
+    margin: 0 auto;
+    grid-template-areas: "hd" "nt" "nv" "vt" "bn" "ft";
+  }
+  section#noticias {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  section#ventas {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  section#banners {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section#banners article#bann1 {
+    display: block;
+  }
+  footer {
+    display: block;
+  }
+}
+/******************/
+/***ESTILOS PC*****/
+/******************/
+@media (min-width: 992px) {
+  :root {
+    font-size: 1.3vw;
+  }
+  body {
+    width: 90%;
+    grid-template-areas: "hd" "nt" "vt" "nv" "bn" "ft";
+  }
+  section#noticias {
+    grid-template-areas:
+      "... nt1 nt2 ..."
+      "nt3 ... ... nt4";
+  }
+  section#banners {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "... bn2 bn1 ...";
+  }
+  section#noticias article#not1 {
+    grid-area: nt1;
+  }
+  section#noticias article#not2 {
+    grid-area: nt2;
+  }
+  section#noticias article#not3 {
+    grid-area: nt3;
+  }
+  section#noticias article#not4 {
+    grid-area: nt4;
+  }
+  section#banners article#bann1 {
+    grid-area: bn1;
+  }
+  section#banners article#bann2 {
+    grid-area: bn2;
+  }
+}
