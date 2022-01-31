@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: 1px solid #fff;
+}
+
+:root {
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  --primary-color: #f2d669;
+  --secondary-color: #008575;
+  background-color: var(--primary-color);
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: grey;
+}
+body *:not(header) {
+  margin-top: 0.5rem;
+}
+.titol {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  padding: 0.4rem;
+}
+header #navbar {
+  display: none;
+}
+
+header div#container-logo {
+  width: clamp(100px, 25%, 200px);
+}
+header div#container-menu {
+  height: 150%;
+}
+
+header div#container-logo > img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 200px;
+}
+header div#container-menu > i {
+  font-size: 3.5rem;
+}
+main {
+  min-height: 90vh;
+}
+main article#pasio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main article#pasio > img {
+  height: 100%;
+  width: 80%;
+}
+
+#proxims-concerts table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#proxims-concerts table td {
+  border-bottom: 1px solid --secondary-color;
+  border-top: 1px solid black;
+  text-align: left;
+  padding: 5px;
+}
+
+main article#qui-som p {
+  text-align: justify;
+}
+
+main article#qui-som img {
+  width: 80%;
+}
+
+@media (min-width: 960px) {
+  :root {
+    font-size: 25px;
+  }
+  body {
+    background: url('./imgs/background2.jpg');
+  }
+  header {
+    background-color: black;
+    height: 18vh;
+    padding: 0.8rem 0;
+  }
+  header #container-menu {
+    display: none;
+  }
+  header #container-logo {
+    width: 30%;
+  }
+  header #container-logo > img {
+    width: 50px;
+  }
+  header #navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 55%;
+  }
+  header #navbar a {
+    color: #fff;
+  }
+  #proxims-concerts {
+    display: none;
+  }
+  main article#qui-som #container-qui-som {
+    padding: 0.3rem;
+    display: flex;
+  }
+}
