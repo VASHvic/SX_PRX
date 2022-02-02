@@ -26,42 +26,33 @@
   color: #fff;
   --primary-color: #f2d669;
   background-color: var(--primary-color);
+  --image-width: 80%;
 }
 body {
   width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: rgb(70, 69, 69);
 }
-body *:not(header) {
-  margin-top: 0.5rem;
-}
+
 .titol {
   font-weight: bolder;
   font-size: 2.2rem;
   font-family: Oswald-bold;
   color: var(--primary-color);
-  margin-top: 1rem;
+  margin-top: 0.6rem;
 }
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #000;
-  padding: 0.4rem;
+  padding-top: 0.5rem;
 }
 header #navbar {
   display: none;
 }
-/* no funciona per que son flex items */
-/* header div#container-logo {
-  width: clamp(150px, 35%, 200px);
-} */
-header div#container-menu {
-  height: 150%;
-}
-
 header div#container-logo > img {
-  height: 100%;
   width: 100%;
   margin: 0 auto;
   max-width: 200px;
@@ -77,7 +68,8 @@ main article#pasio {
 }
 main article#pasio > img {
   height: 100%;
-  width: 80%;
+  width: var(--image-width);
+  border-radius: 15px;
 }
 
 #proxims-concerts table {
@@ -112,19 +104,23 @@ main article#qui-som p {
 }
 
 main article#qui-som img {
-  width: 70%;
+  width: var(--image-width);
+  border-radius: 15px;
 }
 
 @media (min-width: 960px) {
   :root {
-    font-size: 25px;
+    font-size: 22px;
   }
   body {
     background: url('./imgs/background2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 99vh;
   }
   header {
-    height: 18vh;
-    padding: 0.8rem 0;
+    height: 15vh;
   }
   header #container-menu {
     display: none;
@@ -146,8 +142,26 @@ main article#qui-som img {
   #proxims-concerts {
     display: none;
   }
+  main {
+    display: grid;
+    grid-template-columns: 28% 66%;
+    gap: 5rem;
+  }
+  main article#pasio {
+    margin-top: -0.5rem;
+    height: 80%;
+  }
+  main article#pasio > img {
+    height: 100%;
+    width: 80%;
+  }
   main article#qui-som #container-qui-som {
     padding: 0.3rem;
-    display: flex;
+  }
+  article#pasio {
+    order: +1;
+  }
+  main article#qui-som img {
+    display: none;
   }
 }
