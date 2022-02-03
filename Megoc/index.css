@@ -25,14 +25,14 @@
   font-family: Oswald-light;
   color: #fff;
   --primary-color: #f2d669;
-  background-color: var(--primary-color);
+  --secondary-color: rgb(70, 69, 69);
   --image-width: 80%;
 }
 body {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: rgb(70, 69, 69);
+  background-color: var(--secondary-color);
 }
 
 .titol {
@@ -117,7 +117,8 @@ main article#qui-som img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    min-height: 99vh;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
   header {
     height: 15vh;
@@ -144,12 +145,18 @@ main article#qui-som img {
   }
   main {
     display: grid;
-    grid-template-columns: 28% 66%;
-    gap: 5rem;
+    grid-template-areas: '. qui pas';
+    grid-template-columns: 10% 25% 55%;
+    gap: 3rem;
   }
   main article#pasio {
-    margin-top: -0.5rem;
+    grid-area: pas;
+    margin-top: -0.3em;
     height: 80%;
+    margin-left: -5rem;
+  }
+  main article#pasio > h1 {
+    color: var(--secondary-color);
   }
   main article#pasio > img {
     height: 100%;
@@ -161,7 +168,56 @@ main article#qui-som img {
   article#pasio {
     order: +1;
   }
+  article#qui-som {
+    grid-area: qui;
+    background-color: rgb(70, 69, 69);
+    height: min-content;
+    border-radius: 35px;
+    margin-top: 1rem;
+  }
+  article#qui-som > * {
+    margin: 0;
+  }
   main article#qui-som img {
     display: none;
+  }
+  /* From cssbuttons.io by @CristianMontoya98 */
+  .btn {
+    width: 6.5em;
+    height: 2.8em;
+    margin: 0.5em;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  button:hover {
+    color: #000;
+  }
+
+  button:after {
+    content: '';
+    background: var(--primary-color);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+  }
+
+  button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
 }
