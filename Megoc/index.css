@@ -108,6 +108,16 @@ main article#qui-som img {
   border-radius: 15px;
 }
 
+@media screen and (max-width: 500px) {
+  .modal-wrap {
+    width: calc(100% - 40px);
+    padding-bottom: 15px;
+  }
+  .modal-wrap p {
+    padding: 15px 20px 0 20px;
+  }
+}
+
 @media (min-width: 960px) {
   :root {
     font-size: 22px;
@@ -123,7 +133,7 @@ main article#qui-som img {
     min-height: 90vh;
   }
   header {
-    height: 9.5vh;
+    height: 10vh;
     padding: 1.5rem;
   }
   header #container-menu {
@@ -151,26 +161,28 @@ main article#qui-som img {
     display: grid;
     grid-template-areas: '. qui pas';
     grid-template-columns: 10% 25% 55%;
-    gap: 3rem;
+    gap: 5rem;
   }
   main article#pasio {
     grid-area: pas;
-    margin-top: -0.3em;
-    height: 80%;
-    margin-left: -5rem;
+    margin-top: 1.5em;
+    height: 85%;
+    margin-left: -4rem;
   }
   main article#pasio > h1 {
     color: var(--primary-color);
+    position: absolute;
   }
   main article#pasio > img {
     aspect-ratio: 19/6;
+    border-radius: 31px;
+    box-shadow: -2px -2px 15px var(--primary-color), 18px 18px 25px #5a5a5a;
   }
   main article#qui-som #container-qui-som {
     padding: 0.3rem;
   }
   article#pasio {
     order: +1;
-    background-color: var(--secondary-color);
     width: 100%;
     border-radius: 50px;
   }
