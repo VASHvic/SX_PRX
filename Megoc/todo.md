@@ -5,3 +5,4 @@
 - fer carrusel
 - donar animació a qui som
 - buscar un fomrulari online
+- tu25 dwec form modal
