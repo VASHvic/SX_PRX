@@ -108,16 +108,6 @@ main article#qui-som img {
   border-radius: 15px;
 }
 
-@media screen and (max-width: 500px) {
-  .modal-wrap {
-    width: calc(100% - 40px);
-    padding-bottom: 15px;
-  }
-  .modal-wrap p {
-    padding: 15px 20px 0 20px;
-  }
-}
-
 @media (min-width: 960px) {
   :root {
     font-size: 22px;
@@ -143,9 +133,7 @@ main article#qui-som img {
     width: 30%;
     margin-top: 0.3rem;
   }
-  /* header #container-logo > img {
-    width: 50px;
-  } */
+
   header #navbar {
     display: flex;
     justify-content: space-around;
@@ -156,6 +144,18 @@ main article#qui-som img {
   }
   #proxims-concerts {
     display: none;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+    margin: 0 auto;
+    height: fit-content;
+    width: 80%;
+    margin-top: 2rem;
+  }
+  #proxims-concerts > h1 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
   }
   main {
     display: grid;
@@ -253,3 +253,7 @@ main article#qui-som img {
     transition: all 0.5s;
   }
 }
+
+/* .animate__animated.animate__fadeOut {
+  --animate-duration: 3s;
+} */
