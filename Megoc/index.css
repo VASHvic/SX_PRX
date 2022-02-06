@@ -107,6 +107,11 @@ main article#qui-som img {
   width: var(--image-width);
   border-radius: 15px;
 }
+footer {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+}
 
 @media (min-width: 960px) {
   :root {
@@ -194,7 +199,6 @@ main article#qui-som img {
     grid-area: qui;
     background-color: var(--secondary-color);
     height: min-content;
-    z-index: 10;
     border-radius: 35px;
     margin-top: 1rem;
     box-shadow: inset 0px 0px 0px var(--primary-color),
@@ -203,14 +207,26 @@ main article#qui-som img {
   article#qui-som > * {
     margin: 0;
   }
+  article#cantar {
+    display: flex;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
   main article#qui-som img {
     display: none;
   }
 
-  footer {
-    background-color: #000;
-    position: absolute;
-    width: 100%;
+  .yellow-shadow1 {
+    box-shadow: inset 0px 0px 0px var(--primary-color),
+      inset -5px -5px 5px var(--primary-color);
+  }
+  .yellow-shadow2 {
+    box-shadow: -2px -2px 15px var(--primary-color), 18px 18px 25px #5a5a5a;
   }
   /* From cssbuttons.io by @CristianMontoya98 */
   .btn {

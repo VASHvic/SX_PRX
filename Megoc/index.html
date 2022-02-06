@@ -24,7 +24,7 @@
         </div>
         <div id="navbar">
             <button onclick="mostraConcerts()" class="btn">PRÓXIMS CONCERTS</button>
-            <button href="" class="btn">T'AGRADA CANTAR</button>
+            <button onclick="tagradaCantar()" class="btn">T'AGRADA CANTAR?</button>
             <button href="" class="btn">LA NOSTRA GALERIA</button>
         </div>
         <div id="container-menu">
@@ -33,7 +33,7 @@
     </header>
     <main>
         <article id="pasio" class="animate__animated">
-            <h1 class="titol">LA NOSTRA PASIÓ</h1>
+            <h1 class="titol">LA NOSTRA PASSIÓ</h1>
             <img src="./imgs/principal.jpg" alt="">
 
         </article>
@@ -53,7 +53,7 @@
             </table>
         </article>
         <article id="qui-som" class="animate__animated">
-            <h1 class="titol">QUÍ SOM?</h1>
+            <h1 class="titol">QUI SOM?</h1>
             <section id="container-qui-som">
                 <p id="descripcio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit suscipit ipsa non
                     iure
@@ -64,6 +64,15 @@
                 </p>
                 <img src="./imgs/qui-som.jpg" alt="foto de grupo">
             </section>
+        </article>
+        <article id="cantar" style="display: none;" class="yellow-shadow1">
+            <form action="">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom"><br>
+                <label for="email">Mail</label>
+                <input type="email" name="email" id="email"><br>
+
+            </form>
         </article>
     </main>
     <footer class="animate__animated animate__bounce">
