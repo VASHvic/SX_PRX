@@ -20,7 +20,10 @@
 <body>
     <header>
         <div id="container-logo">
-            <img src="./imgs/logo-gran-removebg.png" alt="logo megoc">
+            <picture id="container-logo">
+                <source media="(min-width: 960px)" srcset="./imgs/logo-gran-removebg2.png">
+                <img src="./imgs/logo-gran-removebg.png" alt="Logo de Megoc">
+            </picture>
         </div>
         <div id="navbar">
             <button onclick="mostraConcerts()" class="btn">PRÓXIMS CONCERTS</button>
@@ -66,11 +69,21 @@
             </section>
         </article>
         <article id="cantar" style="display: none;" class="yellow-shadow1">
+            <h1 class="titol">Inscriu-te a una prova per a cantar amb nosaltres!</h1>
             <form action="">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom"><br>
-                <label for="email">Mail</label>
-                <input type="email" name="email" id="email"><br>
+                <div class="form-control">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom">
+                </div>
+                <div class="form-control">
+                    <label for="email">Mail</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-control">
+                    <label for="telefon">Telèfon</label>
+                    <input type="phone" name="telefon" id="telefon">
+                </div>
+
 
             </form>
         </article>
