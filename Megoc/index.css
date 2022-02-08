@@ -34,6 +34,19 @@ body {
   margin: 0 auto;
   background-color: var(--secondary-color);
 }
+aside#mobile-menu {
+  position: absolute;
+  background-color: #333;
+  width: fit-content;
+  height: 100vh;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+aside#mobile-menu button:first-of-type {
+  margin-top: 2rem;
+}
 
 .titol {
   font-weight: bolder;
@@ -47,12 +60,11 @@ header {
   justify-content: space-around;
   align-items: center;
   background-color: #000;
-  /* padding-top: 0.5rem; */
 }
 header #navbar {
   display: none;
 }
-header #container-logo > picture > img {
+header a #container-logo > picture > img {
   width: 100%;
   margin: 0 auto;
   max-width: 200px;
@@ -112,13 +124,57 @@ footer {
   position: absolute;
   width: 100%;
 }
+/********ANIMACIÓN BOTONES********************/
+/* From cssbuttons.io by @CristianMontoya98 */
+.btn {
+  width: 13em;
+  height: 3em;
+  margin: 0.5em;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  line-height: 0.9rem;
+}
+
+button:hover {
+  color: #000;
+}
+
+button:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
 @media (min-width: 960px) {
   :root {
-    font-size: 22px;
+    font-size: 21px;
   }
   body {
     overflow-x: hidden;
+  }
+  aside#mobile-menu {
+    display: none;
   }
   main {
     background: url('./imgs/background2.jpg');
@@ -134,7 +190,7 @@ footer {
   header #container-menu {
     display: none;
   }
-  header #container-logo {
+  header a {
     width: 30%;
     margin-top: 0.3rem;
   }
@@ -181,7 +237,7 @@ footer {
   main article#pasio > img {
     aspect-ratio: 19/6;
     border-radius: 31px;
-    box-shadow: -2px -2px 15px var(--primary-color), 18px 18px 25px #5a5a5a;
+    box-shadow: -2px -2px 10px var(--primary-color), 20px 20px 25px #5a5a5a;
   }
   main article#qui-som #container-qui-som {
     padding: 0.3rem;
@@ -252,47 +308,7 @@ footer {
       inset -5px -5px 5px var(--primary-color);
   }
   .yellow-shadow2 {
-    box-shadow: -2px -2px 15px var(--primary-color), 18px 18px 25px #5a5a5a;
-  }
-  /* From cssbuttons.io by @CristianMontoya98 */
-  .btn {
-    width: 13em;
-    height: 3em;
-    margin: 0.5em;
-    background: var(--secondary-color);
-    color: #fff;
-    border: none;
-    border-radius: 0.625em;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    line-height: 0.9rem;
-  }
-
-  button:hover {
-    color: #000;
-  }
-
-  button:after {
-    content: '';
-    background: var(--primary-color);
-    position: absolute;
-    z-index: -1;
-    left: -20%;
-    right: -20%;
-    top: 0;
-    bottom: 0;
-    transform: skewX(-45deg) scale(0, 1);
-    transition: all 0.5s;
-  }
-
-  button:hover:after {
-    transform: skewX(-45deg) scale(1, 1);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    box-shadow: -2px -2px 10px var(--primary-color), 20px 20px 25px #5a5a5a;
   }
 }
 

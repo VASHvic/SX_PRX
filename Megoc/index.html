@@ -18,22 +18,29 @@
 </head>
 
 <body>
+    <aside id="mobile-menu">
+        <button onclick="tagradaCantar()" class="btn">T'AGRADA CANTAR?</button>
+        <button href="" class="btn">LA NOSTRA GALERIA</button>
+    </aside>
     <header>
-        <div id="container-logo">
-            <picture id="container-logo">
-                <source media="(min-width: 960px)" srcset="./imgs/logo-gran-removebg2.png">
-                <img src="./imgs/logo-gran-removebg.png" alt="Logo de Megoc">
-            </picture>
-        </div>
+        <a href="index.html">
+            <div id="container-logo">
+                <picture id="container-logo">
+                    <source media="(min-width: 960px)" srcset="./imgs/logo-gran-removebg2.png">
+                    <img src="./imgs/logo-gran-removebg.png" alt="Logo de Megoc">
+                </picture>
+            </div>
+        </a>
         <div id="navbar">
             <button onclick="mostraConcerts()" class="btn">PRÓXIMS CONCERTS</button>
             <button onclick="tagradaCantar()" class="btn">T'AGRADA CANTAR?</button>
             <button href="" class="btn">LA NOSTRA GALERIA</button>
         </div>
-        <div id="container-menu">
+        <div id="container-menu" onclick="burguerMenu()" style="cursor: pointer;">
             <i class="fas fa-bars"></i>
         </div>
     </header>
+
     <main>
         <article id="pasio" class="animate__animated">
             <h1 class="titol">LA NOSTRA PASSIÓ</h1>

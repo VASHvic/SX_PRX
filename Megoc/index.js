@@ -6,6 +6,8 @@ const main = document.querySelector('main');
 const media = window.matchMedia('(max-width: 960px)');
 const footer = document.querySelector('footer');
 const cantar = document.getElementById('cantar');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenu.style.display = 'none';
 
 const estat = {
   modal: false,
@@ -13,6 +15,7 @@ const estat = {
   pasio: true,
   concerts: false,
   cantar: false,
+  mobileMenu: false,
 };
 
 media.addEventListener('change', refresh);
@@ -84,8 +87,18 @@ function tagradaCantar() {
 
 function refresh() {
   if (estat.modal) {
-    main.style.display = 'none';
-    footer.style.display = 'none';
+    // main.style.display = 'none';
+    // footer.style.display = 'none';
     location.reload();
+  }
+}
+function burguerMenu() {
+  estat.modal = true;
+  if (estat.mobileMenu === false) {
+    estat.mobileMenu = true;
+    mobileMenu.style.display = 'flex';
+  } else {
+    estat.mobileMenu = false;
+    mobileMenu.style.display = 'none';
   }
 }
