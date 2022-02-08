@@ -59,7 +59,7 @@ function amagaConcerts() {
   pasio.classList.add('animate__fadeIn');
   proximsConcerts.classList.add('animate__fadeOut');
   proximsConcerts.classList.add('animate__fadeOut');
-  main.style.display = 'grid';
+  main.style.display = 'flex';
   proximsConcerts.style.display = 'none';
   quiSom.style.display = 'flex';
   pasio.style.display = 'flex';
