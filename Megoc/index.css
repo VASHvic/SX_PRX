@@ -123,6 +123,33 @@ footer {
   background-color: #000;
   position: absolute;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+footer > * {
+  border: 1px solid white;
+}
+footer #footer-info {
+  grid-column: 1/4;
+}
+footer #idiomes {
+  display: flex;
+  justify-content: center;
+}
+footer #idiomes li > img {
+  width: 50px;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+
+footer #xarxes-container {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+footer #xarxes-container > li {
+  margin-right: 10px;
 }
 /********ANIMACIÓN BOTONES********************/
 /* From cssbuttons.io by @CristianMontoya98 */
