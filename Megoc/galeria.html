@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imgs/megoc-logo.png" type="image/x-icon">
+    <script src="./index.js" defer></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <aside id="mobile-menu">
+        <button onclick="tagradaCantarMobile()" class="btn">T'AGRADA CANTAR?</button>
+        <button href="" class="btn">LA NOSTRA GALERIA</button>
+    </aside>
+    <header>
+        <a href="index.html">
+            <div id="container-logo">
+                <picture id="container-logo">
+                    <source media="(min-width: 960px)" srcset="./imgs/logo-gran-removebg2.png">
+                    <img src="./imgs/logo-gran-removebg.png" alt="Logo de Megoc">
+                </picture>
+            </div>
+        </a>
+        <div id="navbar">
+            <button onclick="anarIndex()" class="btn">TORNAR ARRERE</button>
+            <button onclick="anarGaleria()" class="btn">LA NOSTRA GALERIA</button>
+        </div>
+        <div id="container-menu" onclick="burguerMenu()" style="cursor: pointer;">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <h1>aa</h1>
+
+    </main>
+    <footer class="animate__animated animate__bounce">
+        <p id="footer-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, aspernatur!</p>
+        <ul id="xarxes-container">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+        <ul id="idiomes">
+            <li><img src="./imgs/valencia.png" alt=""></li>
+            <li><img src="./imgs/españa.png" alt=""></li>
+            <li><img src="./imgs/america.png" alt=""></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -102,3 +102,9 @@ function burguerMenu() {
     mobileMenu.style.display = 'none';
   }
 }
+function anarGaleria() {
+  window.location.href = 'galeria.html';
+}
+function anarIndex() {
+  window.location.href = 'index.html';
+}
