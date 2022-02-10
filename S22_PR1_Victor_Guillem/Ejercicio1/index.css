@@ -1,0 +1,49 @@
+header {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-image: url("./img/f1.png");
+  background-repeat: 'no-repeat';
+  background-color: 'none';
+}
+
+header section {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+header section * {
+  display: inline-block;
+  background-color: #5e5e5e;
+}
+
+header section h1 {
+  font-family: Arial;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  text-align: center;
+  display: inline-block;
+}
+
+nav ul li a {
+  font-family: Georgia;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  color: #f9f9f9;
+  background-color: #5e5e5e;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+nav ul li a:hover {
+  color: #5e5e5e;
+  background-color: #f9f9f9;
+}
+/*# sourceMappingURL=index.css.map */
