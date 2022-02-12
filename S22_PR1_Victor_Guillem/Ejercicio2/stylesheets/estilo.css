@@ -9,9 +9,12 @@
   font-size: 16px;
 }
 
+div {
+  width: 50vw;
+}
+
 div:not(#parrafos) {
   padding: 20px;
-  width: 50%;
 }
 
 div#primero {
@@ -21,7 +24,6 @@ div#primero {
 div#primero p.destacado {
   color: #ff8000;
   font-size: 1.6rem;
-  padding: 6px;
   text-align: center;
 }
 
@@ -34,7 +36,7 @@ div#segundo p.destacado {
   text-align: left;
   font-size: 1.4rem;
   text-decoration: underline;
-  padding: 5ex;
+  padding: 5px;
 }
 
 div#segundo #parrafos {

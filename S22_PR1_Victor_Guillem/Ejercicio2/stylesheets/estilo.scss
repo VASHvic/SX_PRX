@@ -10,9 +10,9 @@ $verde-oscuro: #2e5f64;
 }
 
 div {
+  width: 50vw;
   &:not(#parrafos) {
     padding: 20px;
-    width: 50%;
   }
   &#primero {
     text-align: justify;
@@ -20,7 +20,6 @@ div {
       &.destacado {
         color: $naranja;
         font-size: 1.6rem;
-        padding: 6px;
         text-align: center;
       }
     }
@@ -35,7 +34,7 @@ div {
         text-align: left;
         font-size: 1.4rem;
         text-decoration: underline;
-        padding: 5ex;
+        padding: 5px;
       }
     }
     #parrafos {
