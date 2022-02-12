@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+div:not(#parrafos) {
+  padding: 20px;
+  width: 50%;
+}
+
+div#primero {
+  text-align: justify;
+}
+
+div#primero p.destacado {
+  color: #ff8000;
+  font-size: 1.6rem;
+  padding: 6px;
+  text-align: center;
+}
+
+div#segundo:first-child {
+  font-style: italic;
+}
+
+div#segundo p.destacado {
+  color: #2e5f64;
+  text-align: left;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  padding: 5ex;
+}
+
+div#segundo #parrafos {
+  text-align: right;
+}
+
+div#segundo #parrafos:not(.destacado)::first-line {
+  font-style: italic;
+}
+/*# sourceMappingURL=estilo.css.map */

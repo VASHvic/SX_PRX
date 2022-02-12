@@ -1,0 +1,48 @@
+$naranja: #ff8000;
+$verde-oscuro: #2e5f64;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+}
+
+div {
+  &:not(#parrafos) {
+    padding: 20px;
+    width: 50%;
+  }
+  &#primero {
+    text-align: justify;
+    p {
+      &.destacado {
+        color: $naranja;
+        font-size: 1.6rem;
+        padding: 6px;
+        text-align: center;
+      }
+    }
+  }
+  &#segundo {
+    &:first-child {
+      font-style: italic;
+    }
+    p {
+      &.destacado {
+        color: $verde-oscuro;
+        text-align: left;
+        font-size: 1.4rem;
+        text-decoration: underline;
+        padding: 5ex;
+      }
+    }
+    #parrafos {
+      text-align: right;
+      &:not(.destacado)::first-line {
+        font-style: italic;
+      }
+    }
+  }
+}
