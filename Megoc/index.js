@@ -16,7 +16,9 @@ const estat = {
   concerts: false,
   cantar: false,
   mobileMenu: false,
+  concertsGaleria: true,
 };
+console.log(estat);
 
 media.addEventListener('change', refresh);
 
@@ -103,8 +105,26 @@ function burguerMenu() {
   }
 }
 function anarGaleria() {
-  window.location.href = 'galeria.html';
+  estat.quiSom = false;
+  estat.pasio = false;
+  return (window.location.href = 'galeria.html');
 }
 function anarIndex() {
-  window.location.href = 'index.html';
+  return (window.location.href = 'index.html');
+}
+
+function mostraConcertsGaleria() {
+  estat.concertsGaleria = true;
+  estat.concerts = true;
+  anarIndex();
+}
+
+if (
+  document.referrer.endsWith('galeria.html') &&
+  estat.concertsGaleria === true &&
+  window.innerWidth >= 960
+) {
+  mostraConcerts();
+  estat.concertsGaleria = false;
+  console.log();
 }

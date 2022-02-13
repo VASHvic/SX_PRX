@@ -43,6 +43,7 @@ aside#mobile-menu {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+  z-index: 1;
 }
 aside#mobile-menu button:first-of-type {
   margin-top: 2rem;
