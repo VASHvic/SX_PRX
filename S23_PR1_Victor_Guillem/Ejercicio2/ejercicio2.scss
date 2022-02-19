@@ -1,0 +1,90 @@
+$color-error: #ff0000;
+$color-warning: rgb(239, 241, 120);
+$color-accepted: rgb(55, 138, 0);
+$color-normal: rgb(0, 110, 255);
+$color-shadow: #888;
+
+$border-radius: 0.4rem;
+
+$btn-colors: (
+  'error': $color-error,
+  'warning': $color-warning,
+  'accepted': $color-accepted,
+  'normal': $color-normal,
+);
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+  &:hover {
+    box-shadow: $border-radius/2 $border-radius/2 $color-shadow;
+  }
+  &:active {
+    background-color: orange;
+    color: white;
+  }
+}
+@each $k, $v in $btn-colors {
+  .btn-#{$k} {
+    background-color: $v;
+  }
+}
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+$color-col-pares: #cccccc;
+$color-col-impares: #888888;
+
+@function colum-color($col-number) {
+  @if ($col-number%2 == 0) {
+    @return $color-col-pares;
+  } @else {
+    @return $color-col-impares;
+  }
+}
+
+$inicio: 1;
+$fin: 10;
+
+tbody tr td:hover {
+  background-color: orange;
+}
+
+@for $num from $inicio to $fin {
+  tbody tr td:nth-child(#{$num}) {
+    background-color: colum-color($num);
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row > * {
+  border: 1px solid black;
+  height: 150px;
+}
+
+$num_elementos: 10;
+
+@function anchura_col($i) {
+  @return (100 / $num_elementos) * $i;
+}
+
+@for $i from 1 through $num_elementos {
+  .row > .col-#{$i} {
+    padding: 1rem;
+    width: #{anchura_col($i)}+ '%';
+  }
+}

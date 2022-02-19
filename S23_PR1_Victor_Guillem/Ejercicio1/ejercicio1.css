@@ -1,0 +1,51 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #919b6f;
+  padding: 0.2rem;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav ul li:hover {
+  color: #ffffff;
+}
+
+nav ul li.active {
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+figure.card {
+  border: 0.1rem solid #333333;
+  border-radius: 1rem;
+  display: inline-block;
+  padding: 1rem;
+  width: 25%;
+}
+
+figure.card img {
+  width: 100%;
+}
+
+figure.card figcaption {
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+div.col-2 {
+  display: inline;
+}
+/*# sourceMappingURL=ejercicio1.css.map */
