@@ -113,18 +113,12 @@ function anarIndex() {
   return (window.location.href = 'index.html');
 }
 
-function mostraConcertsGaleria() {
-  estat.concertsGaleria = true;
-  estat.concerts = true;
-  anarIndex();
-}
-
-if (
-  document.referrer.endsWith('galeria.html') &&
-  estat.concertsGaleria === true &&
-  window.innerWidth >= 960
-) {
-  mostraConcerts();
-  estat.concertsGaleria = false;
-  console.log();
-}
+// if (
+//   document.referrer.endsWith('galeria.html') &&
+//   estat.concertsGaleria === true &&
+//   window.innerWidth >= 960
+// ) {
+//   mostraConcerts();
+//   estat.concertsGaleria = false;
+//   console.log();
+// }

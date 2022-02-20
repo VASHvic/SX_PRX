@@ -28,6 +28,10 @@
   --secondary-color: rgb(70, 69, 69);
   --image-width: 80%;
 }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 body {
   width: 100%;
   min-height: 100vh;
@@ -38,12 +42,13 @@ aside#mobile-menu {
   position: absolute;
   background-color: #333;
   width: fit-content;
-  height: 100vh;
+  height: min-content;
   opacity: 0.95;
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
   z-index: 1;
+  border-radius: 10px;
 }
 aside#mobile-menu button:first-of-type {
   margin-top: 2rem;
@@ -324,6 +329,10 @@ button:hover:after {
   article#cantar form div.form-control > input {
     flex: 3;
   }
+  article#cantar {
+    display: none;
+  }
+
   main article#qui-som img {
     display: none;
   }

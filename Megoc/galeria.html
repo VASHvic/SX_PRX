@@ -14,14 +14,14 @@
     <!-- animate css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./galeria.css">
     <title>Document</title>
 </head>
 
 <body>
     <aside id="mobile-menu">
         <button onclick="anarIndex()" class="btn">TORNAR ARRERE</button>
-        <button onclick="mostraConcertsGaleria()" class="btn">PRÓXIMS CONCERTS</button>
-        <button onclick="tagradaCantarGaleria()" class="btn">T'AGRADA CANTAR?</button>
+        <button class="btn">LA NOSTRA GALERIA</button>
     </aside>
     <header>
         <a href="index.html">
@@ -34,17 +34,45 @@
         </a>
         <div id="navbar">
             <button onclick="anarIndex()" class="btn">TORNAR ARRERE</button>
-            <button onclick="mostraConcertsGaleria()" class="btn">PRÓXIMS CONCERTS</button>
-            <button onclick="tagradaCantarGaleria()" class="btn">T'AGRADA CANTAR?</button>
+            <button class="btn">LA NOSTRA GALERIA</button>
         </div>
         <div id="container-menu" onclick="burguerMenu()" style="cursor: pointer;">
             <i class="fas fa-bars"></i>
         </div>
     </header>
-
     <main>
-        <h1>aa</h1>
+        <article id="galeria">
+            <section class="card">
+                <h2>Bohemian Rhapsody</h2>
+                <iframe src="https://www.youtube.com/embed/15Jzey8k7B0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p>lorem10</p>
+            </section>
+            <section class="card">
+                <h2>We Will Rock You</h2>
 
+                <iframe src="https://www.youtube.com/embed/PHHjJd4qBnM" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p>lorem10</p>
+            </section>
+            <section class="card">
+                <h2>Love Of My Life</h2>
+
+                <iframe src="https://www.youtube.com/embed/kwAwnM52pDA" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p>lorem10</p>
+            </section>
+            <section class="card">
+                <h2>Livin On A Prayer</h2>
+                <iframe src="https://www.youtube.com/embed/MUzgYRLp2ZM" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p>lorem10</p>
+            </section>
+        </article>
     </main>
     <footer class="animate__animated animate__bounce">
         <p id="footer-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, aspernatur!</p>

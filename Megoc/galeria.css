@@ -1,0 +1,22 @@
+header div#navbar {
+  justify-content: end;
+}
+main {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-rows: 5% 90%;
+  height: min-content;
+  gap: 1rem;
+}
+article#galeria {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+article#galeria section {
+  width: min-content;
+  height: min-content;
+  background-color: #333;
+  border-radius: 10px;
+}
