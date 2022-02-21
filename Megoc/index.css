@@ -149,6 +149,7 @@ footer #idiomes li > img {
   height: 20px;
   margin-right: 10px;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 footer #xarxes-container {
@@ -159,6 +160,9 @@ footer #xarxes-container {
 }
 footer #xarxes-container > li {
   margin-right: 10px;
+}
+footer #xarxes-container i {
+  cursor: pointer;
 }
 /********ANIMACIÓN BOTONES********************/
 /* From cssbuttons.io by @CristianMontoya98 */
