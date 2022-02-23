@@ -240,6 +240,29 @@ footer #xarxes-container i {
   overflow: hidden;
   line-height: 0.9rem;
 }
+.btn2 {
+  width: 6em;
+  height: 1.8em;
+  margin: 0.5em;
+  background: var(--primary-color);
+  color: #333;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  line-height: 0.9rem;
+  margin-top: 0.6rem;
+}
+.btn2:hover {
+  color: #fff;
+}
+.btn2:after {
+  background: #333;
+}
 
 button:hover {
   color: #000;
@@ -321,7 +344,7 @@ button:hover:after {
     margin-bottom: 1rem;
   }
   main article#pasio {
-    margin-top: 6em;
+    margin-top: 1rem;
     margin-right: 2rem;
     flex: 1 1 700px;
     order: +1;

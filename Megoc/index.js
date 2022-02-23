@@ -1,4 +1,5 @@
 const pasio = document.getElementById('pasio');
+const pasioImg = pasio.querySelector('img');
 const pasioH1 = document.querySelector('main article#pasio > h1');
 const quiSom = document.getElementById('qui-som');
 const proximsConcerts = document.getElementById('proxims-concerts');
@@ -18,7 +19,6 @@ const estat = {
   mobileMenu: false,
   concertsGaleria: true,
 };
-console.log(estat);
 
 media.addEventListener('change', refresh);
 
@@ -89,8 +89,6 @@ function tagradaCantar() {
 
 function refresh() {
   if (estat.modal) {
-    // main.style.display = 'none';
-    // footer.style.display = 'none';
     location.reload();
   }
 }
@@ -113,12 +111,18 @@ function anarIndex() {
   return (window.location.href = 'index.html');
 }
 
-// if (
-//   document.referrer.endsWith('galeria.html') &&
-//   estat.concertsGaleria === true &&
-//   window.innerWidth >= 960
-// ) {
-//   mostraConcerts();
-//   estat.concertsGaleria = false;
-//   console.log();
-// }
+let i = 0;
+let images = [];
+images[0] = './imgs/principal.jpg';
+images[1] = './imgs/qui-som.jpg';
+
+function carousel() {
+  pasioImg.src = images[i];
+  if (i < images.length - 1) {
+    i++;
+  } else {
+    i = 0;
+  }
+  setTimeout(() => carousel(), 5000);
+}
+carousel();
