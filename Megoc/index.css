@@ -172,10 +172,25 @@ footer {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  min-height: 10vh;
+}
+footer > * {
+  margin-top: 0.2rem;
 }
 
 footer #footer-info {
   grid-column: 1/4;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 0 0.5rem;
+}
+footer #footer-info img {
+  display: none;
+}
+footer #footer-info p {
+  width: 60%;
+  text-align: justify;
 }
 footer #idiomes {
   display: flex;
@@ -183,8 +198,8 @@ footer #idiomes {
   flex-wrap: wrap;
 }
 footer #idiomes li > img {
-  width: 40px;
-  height: 20px;
+  width: 60px;
+  height: 30px;
   margin-right: 10px;
   margin-top: 12px;
   cursor: pointer;
@@ -194,7 +209,7 @@ footer #xarxes-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
 footer #xarxes-container > li {
   margin-right: 10px;
@@ -255,6 +270,7 @@ button:hover:after {
   }
   body {
     overflow-x: hidden;
+    height: fit-content;
   }
   aside#mobile-menu {
     display: none;
@@ -285,7 +301,7 @@ button:hover:after {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 110% 110%;
-    min-height: 90vh;
+    min-height: 87vh;
     display: flex;
     gap: 3rem;
   }
@@ -305,7 +321,7 @@ button:hover:after {
     margin-bottom: 1rem;
   }
   main article#pasio {
-    margin-top: 3em;
+    margin-top: 6em;
     margin-right: 2rem;
     flex: 1 1 700px;
     order: +1;
@@ -343,6 +359,7 @@ button:hover:after {
 
   article#cantar {
     display: none;
+    box-shadow: -2px -2px 10px var(--primary-color), 20px 20px 25px #5a5a5a;
   }
   article#cantar {
     width: 50%;
@@ -352,5 +369,10 @@ button:hover:after {
 
   main article#qui-som img {
     display: none;
+  }
+  footer #footer-info img {
+    display: flex;
+    max-width: 150px;
+    max-height: 100px;
   }
 }

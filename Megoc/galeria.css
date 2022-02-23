@@ -32,4 +32,5 @@ article#galeria section {
 .card-footer {
   font-size: 0.8rem;
   font-family: Oswald-extra-light;
+  padding-bottom: 0.3rem;
 }
