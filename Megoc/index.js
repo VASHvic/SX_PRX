@@ -20,7 +20,15 @@ const estat = {
   concertsGaleria: true,
 };
 
-media.addEventListener('change', refresh);
+media.addEventListener('change', () => {
+  refresh();
+  if (window.innerWidth > 960) {
+    carousel();
+  } else {
+    pasioImg.src = images[0];
+    pasioH1.style.display = 'block';
+  }
+});
 
 function mostraConcerts() {
   if (estat.cantar) {
@@ -114,15 +122,26 @@ function anarIndex() {
 let i = 0;
 let images = [];
 images[0] = './imgs/principal.jpg';
-images[1] = './imgs/qui-som.jpg';
+images[1] = './imgs/cor.jpg';
+images[2] = './imgs/carrusel3.jpg';
 
 function carousel() {
-  pasioImg.src = images[i];
-  if (i < images.length - 1) {
-    i++;
+  if (window.innerWidth > 960) {
+    pasioImg.src = images[i];
+    if (i < images.length - 1) {
+      i++;
+      if (i === 1) {
+        pasioH1.style.color = '#f2d669';
+        pasioH1.style.display = 'block';
+      } else {
+        pasioH1.style.display = 'none';
+      }
+    } else {
+      i = 0;
+    }
+    setTimeout(() => carousel(), 2000);
   } else {
-    i = 0;
+    pasioImg.src = images[0];
   }
-  setTimeout(() => carousel(), 5000);
 }
 carousel();

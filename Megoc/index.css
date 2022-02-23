@@ -23,7 +23,7 @@
   font-family: Oswald-light;
   color: #fff;
   --primary-color: #f2d669;
-  --secondary-color: rgb(70, 69, 69);
+  --secondary-color: #464545;
   --image-width: 80%;
 }
 a {
@@ -173,9 +173,11 @@ footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   min-height: 10vh;
+  padding-top: 0.2rem;
+  padding-bottom: 1rem;
 }
 footer > * {
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
 }
 
 footer #footer-info {
@@ -191,17 +193,18 @@ footer #footer-info img {
 footer #footer-info p {
   width: 60%;
   text-align: justify;
+  line-height: 1.2em;
 }
 footer #idiomes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1em;
 }
 footer #idiomes li > img {
-  width: 60px;
-  height: 30px;
-  margin-right: 10px;
-  margin-top: 12px;
+  width: 2.2em;
+  height: 1.4em;
+  margin-right: 0.8em;
   cursor: pointer;
 }
 
@@ -209,10 +212,11 @@ footer #xarxes-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 1.7rem;
+  font-size: 1.5em;
+  margin-top: 0.4em;
 }
 footer #xarxes-container > li {
-  margin-right: 10px;
+  margin-right: 1em;
 }
 footer #xarxes-container i {
   cursor: pointer;
