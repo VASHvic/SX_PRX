@@ -1,0 +1,2 @@
+- padding footer
+- banderes? tamanys iconos
